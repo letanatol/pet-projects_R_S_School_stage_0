@@ -15,7 +15,7 @@ html {
 body {
   width: 100%;
   color: #000000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -62,7 +62,7 @@ li {
   display: flex;
   flex: 1 1 auto;
   color: #ffffff;
-  font-family: Forum;
+  font-family: Forum, sans-serif;
   font-size: 30px;
   line-height: 50px;
   letter-spacing: 0.6px;
@@ -94,6 +94,7 @@ li {
 }
 
 @media(hover: hover) {
+
   .header__logo-link:hover,
   .navigation__link:hover {
     color: #bb945f;
@@ -101,8 +102,41 @@ li {
     transition: all 0.5s;
   }
 
-  .header__icon:hover{
+  .header__icon:hover {
     background: url(../images/profile/icon_profile_hover.svg);
     transition: all 0.5s;
   }
+}
+
+/* ------------------  welcome   ----------------------- */
+
+.welcome__container {
+  position: relative;
+  height: 600px;
+  padding: 0;
+  background-image: linear-gradient(180deg, #0c0c0e 0%, #0c0c0e 0.01%, rgba(18, 18, 21, 0.10) 50%, transparent 50%), url(../images/welcome/01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.welcome__content {
+  position: absolute;
+  top: 220px;
+  background-color: #0c0c0e;
+  width: 600px;
+  height: 220px;
+  padding: 35px 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome__title {
+  color: #ffffff;
+  text-align: center;
+  font-family: Forum, sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
