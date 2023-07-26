@@ -37,3 +37,72 @@ ol,
 li {
   list-style: none;
 }
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+._container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ------------------------- header ------------------------------------------------*/
+
+.header__container {
+  display: flex;
+  min-height: 90px;
+  background: #0c0c0e;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  flex: 1 1 auto;
+  color: #ffffff;
+  font-family: Forum;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  text-transform: capitalize;
+  transition: all 0.5s;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 30px;
+  padding-right: 40px;
+}
+
+.navigation__link {
+  color: #ffffff;
+  line-height: 50px;
+  transition: all 0.5s;
+}
+
+.header__icon {
+  background: url(../images/profile/icon_profile.svg);
+  width: 28px;
+  height: 28px;
+  transition: all 0.5s;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+@media(hover: hover) {
+  .header__logo-link:hover,
+  .navigation__link:hover {
+    color: #bb945f;
+    text-decoration: underline;
+    transition: all 0.5s;
+  }
+
+  .header__icon:hover{
+    background: url(../images/profile/icon_profile_hover.svg);
+    transition: all 0.5s;
+  }
+}
