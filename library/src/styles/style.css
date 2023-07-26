@@ -49,6 +49,33 @@ li {
   padding: 0 20px;
 }
 
+/*---------------------------------- section-title h2   ------------------------------------- */
+
+.section-title {
+  padding: 20px 0 60px;
+}
+
+.h2 {
+  position: relative;
+  text-align: center;
+  color: #0c0c0e;
+  font-family: Forum;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.h2::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #0c0c0e;
+  left: calc(50% - 25px);
+  top: 60px;
+}
+
 /* ------------------------- header ------------------------------------------------*/
 
 .header__container {
@@ -139,4 +166,50 @@ li {
   line-height: 50px;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+/* ------------------- About ------------------------------------*/
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 31px;
+}
+
+.about__content {
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+.about__carousel {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.about__pagination {
+  display: flex;
+  margin: 0 auto;
+}
+
+.pagination-button {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.pagination-item {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #0c0c0e;
+  border-radius: 50%;
+}
+
+.pagination-item-selected {
+  background-color: #bb945f;
 }
