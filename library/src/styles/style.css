@@ -622,3 +622,64 @@ input:checked+.season__label {
     transition: all 0.5s;
   }
 }
+
+/* ------------------------ footer ----------------------- */
+
+.footer {
+  background-color: #0c0c0e;
+  min-height: 250px;
+}
+
+.footer__address {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 18px;
+}
+
+.socials__list {
+  display: flex;
+  gap: 15px;
+}
+
+.footer__open {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  color: #ffffff;
+  text-align: right;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.footer__border {
+  padding: 20px 0 30px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer__user {
+  display: flex;
+  /* justify-content: space-between; */
+  min-height: 110px;
+  align-items: center;
+  color: #ffffff;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.footer__year {
+  flex: 1;
+}
+
+.footer__school {
+  /* text-align: center; */
+}
+
+.footer__username {
+  flex: 1;
+  text-align: end;
+}
+
+
+/* --------------------- hover -------------------- */
+@media(hover: hover) {}
