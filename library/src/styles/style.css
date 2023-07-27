@@ -442,3 +442,54 @@ input:checked+.season__label {
   letter-spacing: 2px;
   text-transform: capitalize;
 }
+
+/*------------------------------- Contacts ------------------------------*/
+
+.contacts__container {
+  margin-bottom: 40px;
+}
+
+.contacts__phone-title {
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+
+.phone-title-staff {
+  margin-bottom: 20px;
+}
+
+.contacts__phone-list {
+  margin-bottom: 40px;
+}
+
+.contacts__phone-item {
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+@media(hover: hover) {
+  .contacts__phone_link:hover {
+    text-decoration: underline;
+  }
+}
+
+.contacts__phone-director {
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.contacts__phone-director_link {
+  font-weight: 700;
+}
+
+@media(hover: hover) {
+  .contacts__phone-director_link:hover {
+    text-decoration: underline;
+  }
+}
