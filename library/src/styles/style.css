@@ -49,6 +49,22 @@ li {
   padding: 0 20px;
 }
 
+._container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+._layout-2-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+._content-end {
+  display: flex;
+  justify-content: end;
+}
+
 /*---------------------------------- section-title h2   ------------------------------------- */
 
 .section-title {
@@ -378,4 +394,51 @@ input:checked+.season__label {
   position: absolute;
   right: -40px;
   bottom: 0;
+}
+
+/*------------------------- Coffee-Shop --------------------------------*/
+
+.coffee-shop__content {
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.menu-card__title {
+  color: #bb945f;
+  font-family: Forum, sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 43px;
+}
+
+.menu-card__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.menu-card__name {
+  flex: 1 1 auto;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.menu-card__line {
+  width: 100px;
+  height: 1px;
+  background: #bb945f;
+}
+
+.menu-card__price {
+  font-family: Forum, sans-serif;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
