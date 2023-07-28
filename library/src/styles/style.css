@@ -38,6 +38,12 @@ li {
   list-style: none;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: inherit;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
