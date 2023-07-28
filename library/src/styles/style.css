@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  background-color: #000000;
   width: 100%;
   color: #000000;
   font-family: Inter, sans-serif;
@@ -45,13 +46,14 @@ h3 {
 }
 
 .wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: #ffffff;
   min-height: 100%;
   overflow: hidden;
 }
 
 ._container {
-  width: 1440px;
-  margin: 0 auto;
   padding: 0 20px;
 }
 
