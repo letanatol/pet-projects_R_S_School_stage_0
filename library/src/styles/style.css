@@ -118,6 +118,9 @@ h3 {
   line-height: 50px;
   letter-spacing: 0.6px;
   text-transform: capitalize;
+}
+
+.header__logo-link{
   transition: all 0.5s;
 }
 
