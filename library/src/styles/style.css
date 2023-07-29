@@ -20,6 +20,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
+  transition: all 0.4s;
 }
 
 img {
@@ -31,6 +32,12 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.4s;
+}
+
+button,
+input {
+  transition: all 0.4s;
 }
 
 ul,
@@ -120,10 +127,6 @@ h3 {
   text-transform: capitalize;
 }
 
-.header__logo-link {
-  transition: all 0.5s;
-}
-
 .navigation__list {
   display: flex;
   gap: 30px;
@@ -133,14 +136,13 @@ h3 {
 .navigation__link {
   color: #ffffff;
   line-height: 50px;
-  transition: all 0.5s;
 }
 
 .header__icon {
   background: url(../images/profile/icon_profile.svg);
   width: 28px;
   height: 28px;
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 
 .icon:hover {
@@ -153,12 +155,12 @@ h3 {
   .navigation__link:hover {
     color: #bb945f;
     text-decoration: underline;
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
 
   .header__icon:hover {
     background: url(../images/profile/icon_profile_hover.svg);
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
 }
 
@@ -235,13 +237,13 @@ h3 {
   height: 16px;
   background-color: #0c0c0e;
   border-radius: 50%;
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 
 @media(hover: hover) {
   .pagination-button:hover .pagination-item {
     background-color: #bb945f;
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
 }
 
@@ -305,7 +307,7 @@ input:checked+.season__label {
 @media(hover: hover) {
   .season__label:hover:not(:checked+.season__label) {
     text-decoration: underline;
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
 }
 
@@ -389,14 +391,13 @@ input:checked+.season__label {
   line-height: normal;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.5s;
 }
 
 @media(hover: hover) {
   .favorites__book-button:hover:not(:disabled) {
     border: 1px solid #bb945f;
     background: #bb945f;
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
 }
 
@@ -596,7 +597,6 @@ input:checked+.season__label {
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.5s;
 }
 
 .get__title {
@@ -629,7 +629,6 @@ input:checked+.season__label {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
-  transition: all 0.5s;
 }
 
 @media(hover: hover) {
@@ -638,7 +637,7 @@ input:checked+.season__label {
   .get__button:hover {
     border: 1px solid #bb945f;
     background: #bb945f;
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
 }
 
@@ -652,13 +651,35 @@ input:checked+.season__label {
 .footer__address {
   color: #ffffff;
   font-size: 15px;
+  font-style: normal;
   line-height: 20px;
   margin-bottom: 18px;
 }
 
 .socials__list {
   display: flex;
-  gap: 15px;
+  gap: 16px;
+}
+
+.socials__item-twitter .socials__link {
+  display: block;
+  background: url(../images/footer/01.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+}
+
+.socials__item-instagram .socials__link {
+  display: block;
+  background: url(../images/footer/02.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+}
+
+.socials__item-facebook .socials__link {
+  display: block;
+  background: url(../images/footer/03.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
 }
 
 .footer__open {
@@ -678,7 +699,6 @@ input:checked+.season__label {
 
 .footer__user {
   display: flex;
-  /* justify-content: space-between; */
   min-height: 110px;
   align-items: center;
   color: #ffffff;
@@ -690,15 +710,32 @@ input:checked+.season__label {
   flex: 1;
 }
 
-.footer__school {
-  /* text-align: center; */
-}
-
 .footer__username {
   flex: 1;
   text-align: end;
 }
 
-
 /* --------------------- hover -------------------- */
-@media(hover: hover) {}
+@media(hover: hover) {
+  .socials__item-twitter:hover .socials__link {
+    background: url(../images/footer/01-hover.svg) no-repeat center;
+    transition: all 0.4s;
+  }
+
+  .socials__item-instagram:hover .socials__link {
+    background: url(../images/footer/02-hover.svg) no-repeat center;
+    transition: all 0.4s;
+  }
+
+  .socials__item-facebook:hover .socials__link {
+    background: url(../images/footer/03-hover.svg) no-repeat center;
+  }
+
+  .footer__address a:hover,
+  .footer__school a:hover,
+  .footer__username a:hover {
+    color: #bb945f;
+    text-decoration: underline;
+    transition: all 0.4s;
+  }
+}
