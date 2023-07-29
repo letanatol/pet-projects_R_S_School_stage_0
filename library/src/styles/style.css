@@ -229,20 +229,20 @@ h3 {
   cursor: pointer;
 }
 
-@media(hover: hover) {
-  .pagination-button:hover .pagination-item {
-    background-color: #bb945f;
-  }
-}
-
-
-
 .pagination-item {
   display: inline-block;
   width: 16px;
   height: 16px;
   background-color: #0c0c0e;
   border-radius: 50%;
+  transition: all 0.5s;
+}
+
+@media(hover: hover) {
+  .pagination-button:hover .pagination-item {
+    background-color: #bb945f;
+    transition: all 0.5s;
+  }
 }
 
 .pagination-item-selected {
