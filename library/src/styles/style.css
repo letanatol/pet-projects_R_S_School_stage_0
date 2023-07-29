@@ -120,7 +120,7 @@ h3 {
   text-transform: capitalize;
 }
 
-.header__logo-link{
+.header__logo-link {
   transition: all 0.5s;
 }
 
@@ -228,6 +228,14 @@ h3 {
   background-color: transparent;
   cursor: pointer;
 }
+
+@media(hover: hover) {
+  .pagination-button:hover .pagination-item {
+    background-color: #bb945f;
+  }
+}
+
+
 
 .pagination-item {
   display: inline-block;
