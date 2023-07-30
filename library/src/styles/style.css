@@ -203,7 +203,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 31px;
+  margin-bottom: 34px;
 }
 
 .about__content {
@@ -215,7 +215,7 @@ h3 {
 .about__carousel {
   display: flex;
   gap: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .about__pagination {
@@ -254,22 +254,26 @@ h3 {
 /*----------------------------------- Favorites ----------------------------*/
 
 .favorites__container {
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 .favorites__content {
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .season__list {
   display: flex;
-  gap: 90px;
-  margin-bottom: 40px;
+  gap: 91px;
+  margin-bottom: 35px;
 }
 
 .season__item {
+  padding: 5px 0 5px 0;
+  display: flex;
+  gap: 22px;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -296,7 +300,6 @@ input:checked+.season__label {
 }
 
 .season__label {
-  padding-left: 17px;
   cursor: pointer;
 }
 
@@ -369,7 +372,7 @@ input:checked+.season__label {
 }
 
 .favorites__book-description {
-  max-width: 355px;
+  max-width: 356px;
   flex: 1 1 auto;
   font-size: 15px;
   line-height: 40px;
@@ -413,10 +416,13 @@ input:checked+.season__label {
 .favorites__book-image {
   position: absolute;
   right: -40px;
-  bottom: 0;
+  bottom: -1px;
 }
 
 /*------------------------- Coffee-Shop --------------------------------*/
+.coffee-shop__container{
+  margin-bottom: 2px;
+}
 
 .coffee-shop__content {
   margin-bottom: 40px;
@@ -432,14 +438,14 @@ input:checked+.season__label {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 
 .menu-card__item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 60px;
+  gap: 59px;
   margin-bottom: 40px;
 }
 
@@ -517,7 +523,7 @@ input:checked+.season__label {
 /* -------------------- library-cards -----------------------------------------*/
 
 .library-cards__container {
-  margin-bottom: 41px;
+  margin-bottom: 40px;
 }
 
 .library-cards__find {
@@ -611,7 +617,7 @@ input:checked+.season__label {
   text-align: right;
   line-height: 40px;
   letter-spacing: 0.4px;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 }
 
 .get__buttons {
