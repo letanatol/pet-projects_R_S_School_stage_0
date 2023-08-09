@@ -53,19 +53,16 @@ h3 {
 }
 
 .wrapper {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
   background-color: #ffffff;
   min-height: 100%;
-  overflow: hidden;
 }
 
 ._container {
-  padding: 0 20px;
-}
-
-._container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -78,6 +75,22 @@ h3 {
 ._content-end {
   display: flex;
   justify-content: end;
+}
+
+._scroll{
+  overflow: hidden;
+}
+
+._blackout__open {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  opacity: 0.5;
+  transition: all 0.5s;
 }
 
 /*---------------------------------- section-title h2   ------------------------------------- */
@@ -133,6 +146,29 @@ h3 {
   padding-right: 40px;
 }
 
+@media (max-width: 1024px) {
+  .navigation__list {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 332px;
+    height: 570px;
+    background-color: #000000;
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 43px;
+    transform: translateX(332px);
+    transition: transform 1.0s;
+  }
+
+  .navigation__list-open {
+    transform: translateX(0);
+    transition: transform 1.0s;
+  }
+}
+
 .navigation__link {
   color: #ffffff;
   line-height: 50px;
@@ -143,6 +179,7 @@ h3 {
   width: 28px;
   height: 28px;
   transition: all 0.4s;
+  z-index: 3;
 }
 
 .icon:hover {
@@ -162,6 +199,80 @@ h3 {
     background: url(../images/profile/icon_profile_hover.svg);
     transition: all 0.4s;
   }
+}
+
+/*! hamburger*/
+
+.header__hamburger {
+  margin-left: 40px;
+  z-index: 3;
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  width: 45px;
+  height: 20px;
+  transition: all 1.0s;
+}
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+
+.hamburger__line {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  top: calc(50% - 1px);
+  left: 0;
+  transition: all 0.0s ease 0.5s;
+}
+
+.hamburger::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  transition: all 1.0s;
+}
+
+.hamburger::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  transition: all 1.0s;
+}
+
+.hamburger-open>.hamburger__line {
+  opacity: 0;
+  transition: all 0.0s ease 0.0s;
+}
+
+.hamburger-open.hamburger::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+  transition: all 1.0s;
+}
+
+.hamburger-open.hamburger::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+  transition: all 1.0s;
 }
 
 /* ------------------  welcome   ----------------------- */
@@ -278,15 +389,7 @@ h3 {
   cursor: pointer;
 }
 
-/* .season__item input {
-  accent-color: #000000;
-  width: 15px;
-  height: 15px;
-  margin: 0;
-  cursor: pointer;
-} */
-
-.season__label{
+.season__label {
   position: relative;
   cursor: pointer;
 }
@@ -335,9 +438,10 @@ h3 {
   padding-left: 28px;
 }
 
-.season__input:checked ~ .label-style {
+.season__input:checked~.label-style {
   font-weight: 700;
 }
+
 /* 
 .input:checked+.season__label {
   cursor: default;
