@@ -72,6 +72,12 @@ h3 {
   justify-content: space-between;
 }
 
+@media (max-width: 1024px) {
+  ._layout-2-column {
+    flex-wrap: wrap;
+  }
+}
+
 ._content-end {
   display: flex;
   justify-content: end;
@@ -644,7 +650,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
-  .favorites__book-name{
+  .favorites__book-name {
     text-align: center;
     padding: 0 10px;
     line-height: 30px;
@@ -678,7 +684,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
-  .favorites__book-description{
+  .favorites__book-description {
     max-width: 100%;
     padding: 0 15px;
     line-height: 30px;
@@ -691,6 +697,7 @@ h3 {
   border-radius: 2px;
   border: 1px solid #0c0c0e;
   padding: 5px 5px;
+  background-color: #ffffff;
   color: #0C0C0E;
   text-align: center;
   font-size: 10px;
@@ -724,7 +731,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
-  .favorites__book-image{
+  .favorites__book-image {
     position: relative;
     right: 0;
     bottom: 0;
@@ -735,6 +742,16 @@ h3 {
 /*------------------------- Coffee-Shop --------------------------------*/
 .coffee-shop__container {
   margin-bottom: 2px;
+}
+
+@media (max-width: 1024px) {
+  .coffee-shop__container {
+    padding: 0 19px;
+  }
+
+  .menu-card-desserts {
+    margin-left: auto;
+  }
 }
 
 .coffee-shop__content {
@@ -754,12 +771,24 @@ h3 {
   margin-bottom: 40px;
 }
 
+@media (max-width: 520px) {
+  .menu-card__title {
+    font-size: 28px;
+  }
+}
+
 .menu-card__item {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 59px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 520px) {
+  .menu-card__item {
+    gap: 18px;
+  }
 }
 
 .menu-card__name {
@@ -769,10 +798,22 @@ h3 {
   text-transform: capitalize;
 }
 
+@media (max-width: 520px) {
+  .menu-card__name {
+    font-size: 16px;
+  }
+}
+
 .menu-card__line {
   width: 100px;
   height: 1px;
   background: #bb945f;
+}
+
+@media (max-width: 520px) {
+  .menu-card__line {
+    width: 35px;
+  }
 }
 
 .menu-card__price {
