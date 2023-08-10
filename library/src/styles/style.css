@@ -179,7 +179,7 @@ h3 {
     z-index: 2;
     width: 332px;
     height: 570px;
-    background-color: #000000;
+    background-color: #0c0c0e;
     align-items: center;
     padding-top: 100px;
     padding-left: 43px;
@@ -384,7 +384,6 @@ h3 {
     align-items: center;
     max-width: 614px;
     column-gap: 58px;
-    margin-bottom: 22px;
   }
 }
 
@@ -1088,6 +1087,12 @@ h3 {
   min-height: 250px;
 }
 
+@media (max-width: 480px) {
+  .footer__info {
+    align-self: self-start;
+  }
+}
+
 .footer__address {
   color: #ffffff;
   font-size: 15px;
@@ -1132,9 +1137,22 @@ h3 {
   line-height: 20px;
 }
 
+@media (max-width: 480px) {
+  .footer__open {
+    align-self: self-end;
+  }
+}
+
 .footer__border {
   padding: 20px 0 30px;
   border-bottom: 1px solid #ffffff;
+}
+
+@media (max-width: 480px) {
+  .footer__border {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer__user {
@@ -1146,6 +1164,24 @@ h3 {
   letter-spacing: 2px;
 }
 
+@media (max-width: 1024px) {
+  .footer__user {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 690px) {
+  .footer__user {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 390px) {
+  .footer__user {
+    font-size: 14px;
+  }
+}
+
 .footer__year {
   flex: 1;
 }
@@ -1153,6 +1189,19 @@ h3 {
 .footer__username {
   flex: 1;
   text-align: end;
+}
+
+@media (max-width: 1024px) {
+  .footer__username {
+    margin-left: 56px;
+  }
+}
+
+@media (max-width: 690px) {
+  .footer__username {
+    text-align: center;
+    margin: 0;
+  }
 }
 
 /* --------------------- hover -------------------- */
