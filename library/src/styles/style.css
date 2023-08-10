@@ -72,7 +72,7 @@ h3 {
   justify-content: space-between;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   ._layout-2-column {
     flex-wrap: wrap;
   }
@@ -750,6 +750,7 @@ h3 {
   }
 
   .menu-card-desserts {
+    padding-left: 10px;
     margin-left: auto;
   }
 }
@@ -812,7 +813,7 @@ h3 {
 
 @media (max-width: 520px) {
   .menu-card__line {
-    width: 35px;
+    width: 25px;
   }
 }
 
@@ -827,6 +828,18 @@ h3 {
 
 .contacts__container {
   margin-bottom: 40px;
+}
+
+@media (max-width: 1280px) {
+  .contacts__phone {
+    margin-bottom: 99px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contacts__phone {
+    font-size: 16px;
+  }
 }
 
 .contacts__phone-title {
@@ -871,6 +884,15 @@ h3 {
 @media(hover: hover) {
   .contacts__phone-director_link:hover {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 1280px) {
+  .contacts__map {
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    /* margin-left: 17px; */
   }
 }
 
