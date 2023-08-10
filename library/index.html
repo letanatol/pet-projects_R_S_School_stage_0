@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <div class="blackout"></div>
   <div class="wrapper">
 
     <header class="header">
@@ -26,6 +27,9 @@
           </ul>
         </nav>
         <div class="header__icon icon"></div>
+        <span class="header__hamburger hamburger">
+          <span class="hamburger__line"></span>
+        </span>
       </div>
     </header>
 
@@ -47,19 +51,31 @@
           <p class="about__content">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee
             shop inside</p>
           <div class="about__carousel carousel">
-            <div class="carousel__image">
-              <img src="./src/images/about/01.png" alt="library-01">
-            </div>
-            <div class="carousel__image">
-              <img src="./src/images/about/02.png" alt="library-02">
-            </div>
-            <div class="carousel__image">
-              <img src="./src/images/about/03.png" alt="library-03">
-            </div>
+            <button class="carousel__button carousel__button-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+              <img src="./src/images/about/01.png" class="about__image-01" alt="library-01">
+              <img src="./src/images/about/02.png" class="about__image-02" alt="library-02">
+              <img src="./src/images/about/03.png" class="about__image-03" alt="library-03">
+              <!-- <img src="./src/images/about/04.png" class="about__image-04" alt="library-04"> -->
+              <!-- <img src="./src/images/about/05.png" class="about__image-05" alt="library-05"> -->
+            <button class="carousel__button carousel__button-next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
           </div>
           <div class="about__pagination">
             <button class="pagination-button">
               <span class="pagination-item pagination-item-selected"></span>
+            </button>
+            <button class="pagination-button">
+              <span class="pagination-item"></span>
+            </button>
+            <button class="pagination-button">
+              <span class="pagination-item"></span>
             </button>
             <button class="pagination-button">
               <span class="pagination-item"></span>
@@ -352,8 +368,8 @@
             try desserts
             from bakery.
           </p>
-          <div class="_layout-2-column">
-            <div class="coffee-shop__menu-card menu-card">
+          <div class="_layout-2-column coffee-shop__menu-card">
+            <div class="menu-card">
               <div class="menu-card__title">Coffee & Tea</div>
               <ul class="menu-card__list">
                 <li class="menu-card__item">
@@ -388,7 +404,7 @@
                 </li>
               </ul>
             </div>
-            <div class="coffee-shop__menu-card menu-card">
+            <div class="menu-card menu-card-desserts">
               <div class="menu-card__title _content-end">Desserts & Cakes</div>
               <ul class="menu-card__list">
                 <li class="menu-card__item">
@@ -451,7 +467,7 @@
               </p>
             </div>
             <div class="contacts__map">
-              <img src="./src/images/contacts/01.jpg" alt="map" width="696" height="414">
+              <img src="./src/images/contacts/01.jpg" alt="map">
             </div>
           </div>
         </div>
@@ -461,7 +477,7 @@
           <div class="section-title">
             <h2 class="h2">Digital Library Cards</h2>
           </div>
-          <div class="_layout-2-column">
+          <div class="_layout-2-column library-cards">
             <div class="library-cards__find find">
               <p class="find__title">Find your Library card</p>
               <!-- Form -->
