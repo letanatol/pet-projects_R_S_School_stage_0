@@ -563,16 +563,16 @@
       </div>
     </footer>
     <!-- !modal-login -->
-    <div class="modal-login">
-      <div class="modal-login__container">
+    <div class="modal__container">
+      <div class="modal-login">
         <form action="#" class="modal-login__form">
-          <div class="modal-login__title">Login</div>
-          <div class="modal-login__fields">
-            <div class="modal-login__email">
+          <div class="modal__title">Login</div>
+          <div class="modal__fields">
+            <div class="modal-field">
               <label class="modal-login__email-label" for="login-email">E-mail or readers card</label>
               <input class="modal-login__email-input modal-input" type="text" name="login-email" id="login-email">
             </div>
-            <div class="modal-login__password">
+            <div class="modal-field">
               <label class="modal-login__password-label" for="login-password">Password</label>
               <input class="modal-login__password-input modal-input" type="password" name="login-password"
                 id="login-password">
@@ -582,11 +582,55 @@
         </form>
 
         <div class="modal-login__register">
-          <p class="modal-login__question">Don’t have an account?</p>
+          <p class="modal__question">Don’t have an account?</p>
           <button class="modal-login__button-register">Register</button>
         </div>
-        
+
         <button class="modal-login__button-close"></button>
+      </div>
+    </div>
+
+    <!-- !modal-register -->
+    <div class="modal__container">
+      <div class="modal-register">
+        <form action="#" class="modal-register__form">
+          <div class="modal__title">Register</div>
+          <div class="modal__fields">
+
+            <div class="modal-field">
+              <label class="modal-register__first-name" for="first-name">First name</label>
+              <input class="modal-register__first-name modal-input" type="text" name="first-name"
+                id="first-name">
+            </div>
+
+            <div class="modal-field">
+              <label class="modal-register__last-name" for="last-name">Last name</label>
+              <input class="modal-register__last-name modal-input" type="text" name="last-name"
+                id="last-name">
+            </div>
+
+            <div class="modal-field">
+              <label class="modal-register__email-label" for="register-email">E-mail</label>
+              <input class="modal-register__email-input modal-input" type="text" name="register-email"
+                id="register-email">
+            </div>
+
+            <div class="modal-field">
+              <label class="modal-register__password-label" for="register-password">Password</label>
+              <input class="modal-register__password-input modal-input" type="password" name="register-password"
+                id="register-password">
+            </div>
+
+          </div>
+          <button class="modal-register__button">Sign Up</button>
+        </form>
+
+        <div class="modal-register__register">
+          <p class="modal__question">Already have an account?</p>
+          <button class="modal-register__button-register">Login</button>
+        </div>
+
+        <button class="modal-register__button-close"></button>
       </div>
     </div>
   </div>
