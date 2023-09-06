@@ -580,13 +580,11 @@
           </div>
           <button class="modal-login__button">Log In</button>
         </form>
-
         <div class="modal-login__register">
           <p class="modal__question">Don’t have an account?</p>
           <button class="modal-login__button-register">Register</button>
         </div>
-
-        <button class="modal-login__button-close"></button>
+        <button class="modal__button-close"></button>
       </div>
     </div>
 
@@ -596,43 +594,82 @@
         <form action="#" class="modal-register__form">
           <div class="modal__title">Register</div>
           <div class="modal__fields">
-
             <div class="modal-field">
               <label class="modal-register__first-name" for="first-name">First name</label>
-              <input class="modal-register__first-name modal-input" type="text" name="first-name"
-                id="first-name">
+              <input class="modal-register__first-name modal-input" type="text" name="first-name" id="first-name">
             </div>
-
             <div class="modal-field">
               <label class="modal-register__last-name" for="last-name">Last name</label>
-              <input class="modal-register__last-name modal-input" type="text" name="last-name"
-                id="last-name">
+              <input class="modal-register__last-name modal-input" type="text" name="last-name" id="last-name">
             </div>
-
             <div class="modal-field">
               <label class="modal-register__email-label" for="register-email">E-mail</label>
               <input class="modal-register__email-input modal-input" type="text" name="register-email"
                 id="register-email">
             </div>
-
             <div class="modal-field">
               <label class="modal-register__password-label" for="register-password">Password</label>
               <input class="modal-register__password-input modal-input" type="password" name="register-password"
                 id="register-password">
             </div>
-
           </div>
           <button class="modal-register__button">Sign Up</button>
         </form>
-
         <div class="modal-register__register">
           <p class="modal__question">Already have an account?</p>
           <button class="modal-register__button-register">Login</button>
         </div>
-
-        <button class="modal-register__button-close"></button>
+        <button class="modal__button-close"></button>
       </div>
     </div>
+
+    <!-- !modal-my-profile -->
+
+    <div class="modal-profile__container">
+      <div class="modal-profile">
+        <div class="modal-profile__name">
+          <p class="modal-profile__initials">JD</p>
+          <p class="modal-profile__surname">John Doe</p>
+        </div>
+        <div class="modal-profile__content">
+          <div class="modal-profile__title">My profile</div>
+          <div class="modal-profile__info">
+            <div class="info-card">
+              <span class="info-card__title">Visits</span>
+              <div class="info-card__icon-visits"></div>
+              <span class="info-card__amount">23</span>
+            </div>
+            <div class="info-card">
+              <span class="info-card__title">Bonuses</span>
+              <div class="info-card__icon-bonuses"></div>
+              <span class="info-card__amount">1240</span>
+            </div>
+            <div class="info-card">
+              <span class="info-card__title">Books</span>
+              <div class="info-card__icon-books"></div>
+              <span class="info-card__amount">2</span>
+            </div>
+          </div>
+          <div class="modal-profile__rented-books">
+            <div class="rented-books__title">Rented books</div>
+            <ul class="rented-books__list">
+              <li class="rented-books__item">The Last Queen, Clive Irving</li>
+              <li class="rented-books__item">Dominicana, Angie Cruz</li>
+            </ul>
+          </div>
+          <div class="modal-profile__card">
+            <div class="card__title">Card number</div>
+            <div class="card__number">F00234030</div>
+            <button class="modal-profile__button-copy"></button>
+          </div>
+        </div>
+      </div>
+      <button class="modal__button-close"></button>
+    </div>
+
+
+
+
   </div>
   <script src="./src/scripts/script.js"></script>
   <script src="./src/scripts/index.js"></script>
