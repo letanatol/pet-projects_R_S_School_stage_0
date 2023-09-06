@@ -595,12 +595,12 @@
           <div class="modal__title">Register</div>
           <div class="modal__fields">
             <div class="modal-field">
-              <label class="modal-register__first-name" for="first-name">First name</label>
-              <input class="modal-register__first-name modal-input" type="text" name="first-name" id="first-name">
+              <label class="modal-register__first-name-label" for="first-name">First name</label>
+              <input class="modal-register__first-name-input modal-input" type="text" name="first-name" id="first-name">
             </div>
             <div class="modal-field">
-              <label class="modal-register__last-name" for="last-name">Last name</label>
-              <input class="modal-register__last-name modal-input" type="text" name="last-name" id="last-name">
+              <label class="modal-register__last-name-label" for="last-name">Last name</label>
+              <input class="modal-register__last-name-input modal-input" type="text" name="last-name" id="last-name">
             </div>
             <div class="modal-field">
               <label class="modal-register__email-label" for="register-email">E-mail</label>
@@ -667,9 +667,60 @@
       <button class="modal__button-close"></button>
     </div>
 
+    <!-- !modal-by a library card -->
+
+    <div class="modal-buy__container">
+        <div class="modal-buy__title">Buy a library card</div>
+        <div class="modal-buy__content">
+          <form action="#" class="modal-buy__form">
+            <div class="modal__fields">
+
+              <div class="modal__field">
+                <label class="modal-buy__bank-label" for="modal-buy__bank">Bank card number</label>
+                <input class="modal-buy__bank-input modal-input" type="text" name="modal-buy__bank" id="modal-buy__bank">
+              </div>
+
+              <div class="modal__field">
+                <label class="modal-buy__expiration-label" for="modal-buy__expiration">Expiration code</label>
+                <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration" id="modal-buy__expiration01">
+                <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration" id="modal-buy__expiration02">
+              </div>
+
+              <div class="modal__field">
+                <label class="modal-buy__cvc-label" for="modal-buy__cvc">CVC</label>
+                <input class="modal-buy__cvc-input modal-input" type="text" name="modal-buy__cvc" id="modal-buy__cvc">
+              </div>
+
+              <div class="modal__field">
+                <label class="modal-buy__cardholder-label" for="modal-buy__cardholder">Cardholder name</label>
+                <input class="modal-buy__cardholder-input modal-input" type="text" name="modal-buy__cardholder"
+                  id="modal-buy__cardholder">
+              </div>
+
+              <div class="modal__field">
+                <label class="modal-buy__postal-label" for="modal-buy__postal">Postal code</label>
+                <input class="modal-buy__postal-input modal-input" type="text" name="modal-buy__postal"
+                  id="modal-buy__postal">
+              </div>
+
+              <div class="modal__field">
+                <label class="modal-buy__city-label" for="modal-buy__city">City / Town</label>
+                <input class="modal-buy__city-input modal-input" type="text" name="modal-buy__city" id="modal-buy__city">
+              </div>
+            </div>
 
 
+            <div class="modal-buy__buy">
+              <button class="modal-buy__button">Buy</button>
+              <p class="modal-buy__price">$&nbsp;25.00</p>
+            </div>
+          </form>
 
+          <p class="modal-buy__text">If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+          </p>
+        </div>
+      <button class="modal-buy__button-close"></button>
+    </div>
   </div>
   <script src="./src/scripts/script.js"></script>
   <script src="./src/scripts/index.js"></script>

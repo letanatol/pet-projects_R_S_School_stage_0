@@ -1526,12 +1526,12 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-left: 12px;
+  padding-left: 30px;
   margin-bottom: 40px;
 }
 
 .rented-books__item {
-  list-style: inside;
+  list-style: disc;
   line-height: 20px;
   letter-spacing: 2px;
   text-transform: capitalize;
@@ -1549,7 +1549,90 @@ h3 {
 }
 
 .modal-profile__button-copy {
-  background: url(../images/profile/icon_copy.png);
+  background: url(../images/profile/icon_copy.svg);
   width: 14px;
   height: 12px;
+}
+
+
+/* ! modal buy a library card*/
+
+.modal-buy__container {
+  position: relative;
+  max-width: 650px;
+}
+
+.modal-buy__title {
+  color: #FFF;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  background-color: #0c0c0e;
+  padding: 20px 0;
+}
+
+.modal-buy__content {
+  padding: 30px 40px 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-buy__expiration-input {
+  display: inline;
+  width: 45px;
+}
+
+.modal-buy__cvc-input {
+  width: 45px;
+}
+
+.modal-buy__buy {
+  display: flex;
+  align-items: end;
+  gap: 25px;
+}
+
+.modal-buy__button {
+  width: 75px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #0c0c0e;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal-buy__price {
+  color: #0c0c0e;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.modal-buy__text {
+  color: #8E8E8E;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.modal-buy__button-close {
+  background: url(../images/profile/close_btn_white.svg);
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
 }
