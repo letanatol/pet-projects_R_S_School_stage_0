@@ -504,6 +504,23 @@
                     pattern="^[A-Za-z0-9\-\s]+$" required>
                 </div>
                 <button type="submit" class="find__form-button">Check the card</button>
+                <div class="library-cards__info">
+                  <div class="info-card">
+                    <span class="info-card__title">Visits</span>
+                    <div class="info-card__icon-visits"></div>
+                    <span class="info-card__amount">23</span>
+                  </div>
+                  <div class="info-card">
+                    <span class="info-card__title">Bonuses</span>
+                    <div class="info-card__icon-bonuses"></div>
+                    <span class="info-card__amount">1240</span>
+                  </div>
+                  <div class="info-card">
+                    <span class="info-card__title">Books</span>
+                    <div class="info-card__icon-books"></div>
+                    <span class="info-card__amount">2</span>
+                  </div>
+                </div>
               </form>
             </div>
             <div class="library-cards__get get">
@@ -513,6 +530,15 @@
               <div class="get__buttons _content-end">
                 <button type="submit" class="get__button">Sign Up</button>
                 <button type="submit" class="get__button">Log in</button>
+              </div>
+            </div>
+            <div class="library-cards__visit get">
+              <p class="get__title _content-end">Visit your profile</p>
+              <p class="get__content _content-end">With a digital library card you get free access to the Library’s wide
+                array of digital resources including e-books,
+                databases, educational resources, and more.</p>
+              <div class="get__buttons _content-end">
+                <button type="submit" class="get__button">Profile</button>
               </div>
             </div>
           </div>
@@ -563,113 +589,122 @@
       </div>
     </footer>
     <!-- !modal-login -->
-    <div class="modal__container">
-      <div class="modal-login">
-        <form action="#" class="modal-login__form">
-          <div class="modal__title">Login</div>
-          <div class="modal__fields">
-            <div class="modal-field">
-              <label class="modal-login__email-label" for="login-email">E-mail or readers card</label>
-              <input class="modal-login__email-input modal-input" type="text" name="login-email" id="login-email">
+    <div class="modal-overlay">
+      <div class="modal__container modal-hidden">
+        <div class="modal-login">
+          <form action="#" class="modal-login__form">
+            <div class="modal__title">Login</div>
+            <div class="modal__fields">
+              <div class="modal-field">
+                <label class="modal-login__email-label" for="login-email">E-mail or readers card</label>
+                <input class="modal-login__email-input modal-input" type="text" name="login-email" id="login-email">
+              </div>
+              <div class="modal-field">
+                <label class="modal-login__password-label" for="login-password">Password</label>
+                <input class="modal-login__password-input modal-input" type="password" name="login-password"
+                  id="login-password">
+              </div>
             </div>
-            <div class="modal-field">
-              <label class="modal-login__password-label" for="login-password">Password</label>
-              <input class="modal-login__password-input modal-input" type="password" name="login-password"
-                id="login-password">
-            </div>
+            <button class="modal-login__button">Log In</button>
+          </form>
+          <div class="modal-login__register">
+            <p class="modal__question">Don’t have an account?</p>
+            <button class="modal-login__button-register">Register</button>
           </div>
-          <button class="modal-login__button">Log In</button>
-        </form>
-        <div class="modal-login__register">
-          <p class="modal__question">Don’t have an account?</p>
-          <button class="modal-login__button-register">Register</button>
+          <button class="modal__button-close"></button>
         </div>
-        <button class="modal__button-close"></button>
       </div>
     </div>
+
 
     <!-- !modal-register -->
-    <div class="modal__container">
-      <div class="modal-register">
-        <form action="#" class="modal-register__form">
-          <div class="modal__title">Register</div>
-          <div class="modal__fields">
-            <div class="modal-field">
-              <label class="modal-register__first-name-label" for="first-name">First name</label>
-              <input class="modal-register__first-name-input modal-input" type="text" name="first-name" id="first-name">
+    <div class="modal-overlay">
+      <div class="modal__container modal-hidden">
+        <div class="modal-register">
+          <form action="#" class="modal-register__form">
+            <div class="modal__title">Register</div>
+            <div class="modal__fields">
+              <div class="modal-field">
+                <label class="modal-register__first-name-label" for="first-name">First name</label>
+                <input class="modal-register__first-name-input modal-input" type="text" name="first-name"
+                  id="first-name">
+              </div>
+              <div class="modal-field">
+                <label class="modal-register__last-name-label" for="last-name">Last name</label>
+                <input class="modal-register__last-name-input modal-input" type="text" name="last-name" id="last-name">
+              </div>
+              <div class="modal-field">
+                <label class="modal-register__email-label" for="register-email">E-mail</label>
+                <input class="modal-register__email-input modal-input" type="text" name="register-email"
+                  id="register-email">
+              </div>
+              <div class="modal-field">
+                <label class="modal-register__password-label" for="register-password">Password</label>
+                <input class="modal-register__password-input modal-input" type="password" name="register-password"
+                  id="register-password">
+              </div>
             </div>
-            <div class="modal-field">
-              <label class="modal-register__last-name-label" for="last-name">Last name</label>
-              <input class="modal-register__last-name-input modal-input" type="text" name="last-name" id="last-name">
+            <button class="modal-register__button">Sign Up</button>
+          </form>
+          <div class="modal-register__register">
+            <p class="modal__question">Already have an account?</p>
+            <button class="modal-register__button-register">Login</button>
+          </div>
+          <button class="modal__button-close"></button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- !modal-my-profile -->
+    <div class="modal-overlay">
+      <div class="modal-profile__container modal-hidden">
+        <div class="modal-profile">
+          <div class="modal-profile__name">
+            <p class="modal-profile__initials">JD</p>
+            <p class="modal-profile__surname">John Doe</p>
+          </div>
+          <div class="modal-profile__content">
+            <div class="modal-profile__title">My profile</div>
+            <div class="modal-profile__info">
+              <div class="info-card">
+                <span class="info-card__title">Visits</span>
+                <div class="info-card__icon-visits"></div>
+                <span class="info-card__amount">23</span>
+              </div>
+              <div class="info-card">
+                <span class="info-card__title">Bonuses</span>
+                <div class="info-card__icon-bonuses"></div>
+                <span class="info-card__amount">1240</span>
+              </div>
+              <div class="info-card">
+                <span class="info-card__title">Books</span>
+                <div class="info-card__icon-books"></div>
+                <span class="info-card__amount">2</span>
+              </div>
             </div>
-            <div class="modal-field">
-              <label class="modal-register__email-label" for="register-email">E-mail</label>
-              <input class="modal-register__email-input modal-input" type="text" name="register-email"
-                id="register-email">
+            <div class="modal-profile__rented-books">
+              <div class="rented-books__title">Rented books</div>
+              <ul class="rented-books__list">
+                <li class="rented-books__item">The Last Queen, Clive Irving</li>
+                <li class="rented-books__item">Dominicana, Angie Cruz</li>
+              </ul>
             </div>
-            <div class="modal-field">
-              <label class="modal-register__password-label" for="register-password">Password</label>
-              <input class="modal-register__password-input modal-input" type="password" name="register-password"
-                id="register-password">
+            <div class="modal-profile__card">
+              <div class="card__title">Card number</div>
+              <div class="card__number">F00234030</div>
+              <button class="modal-profile__button-copy"></button>
             </div>
           </div>
-          <button class="modal-register__button">Sign Up</button>
-        </form>
-        <div class="modal-register__register">
-          <p class="modal__question">Already have an account?</p>
-          <button class="modal-register__button-register">Login</button>
         </div>
         <button class="modal__button-close"></button>
       </div>
     </div>
 
-    <!-- !modal-my-profile -->
-
-    <div class="modal-profile__container">
-      <div class="modal-profile">
-        <div class="modal-profile__name">
-          <p class="modal-profile__initials">JD</p>
-          <p class="modal-profile__surname">John Doe</p>
-        </div>
-        <div class="modal-profile__content">
-          <div class="modal-profile__title">My profile</div>
-          <div class="modal-profile__info">
-            <div class="info-card">
-              <span class="info-card__title">Visits</span>
-              <div class="info-card__icon-visits"></div>
-              <span class="info-card__amount">23</span>
-            </div>
-            <div class="info-card">
-              <span class="info-card__title">Bonuses</span>
-              <div class="info-card__icon-bonuses"></div>
-              <span class="info-card__amount">1240</span>
-            </div>
-            <div class="info-card">
-              <span class="info-card__title">Books</span>
-              <div class="info-card__icon-books"></div>
-              <span class="info-card__amount">2</span>
-            </div>
-          </div>
-          <div class="modal-profile__rented-books">
-            <div class="rented-books__title">Rented books</div>
-            <ul class="rented-books__list">
-              <li class="rented-books__item">The Last Queen, Clive Irving</li>
-              <li class="rented-books__item">Dominicana, Angie Cruz</li>
-            </ul>
-          </div>
-          <div class="modal-profile__card">
-            <div class="card__title">Card number</div>
-            <div class="card__number">F00234030</div>
-            <button class="modal-profile__button-copy"></button>
-          </div>
-        </div>
-      </div>
-      <button class="modal__button-close"></button>
-    </div>
 
     <!-- !modal-by a library card -->
-
-    <div class="modal-buy__container">
+    <div class="modal-overlay">
+      <div class="modal-buy__container modal-hidden">
         <div class="modal-buy__title">Buy a library card</div>
         <div class="modal-buy__content">
           <form action="#" class="modal-buy__form">
@@ -677,13 +712,16 @@
 
               <div class="modal__field">
                 <label class="modal-buy__bank-label" for="modal-buy__bank">Bank card number</label>
-                <input class="modal-buy__bank-input modal-input" type="text" name="modal-buy__bank" id="modal-buy__bank">
+                <input class="modal-buy__bank-input modal-input" type="text" name="modal-buy__bank"
+                  id="modal-buy__bank">
               </div>
 
               <div class="modal__field">
                 <label class="modal-buy__expiration-label" for="modal-buy__expiration">Expiration code</label>
-                <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration" id="modal-buy__expiration01">
-                <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration" id="modal-buy__expiration02">
+                <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
+                  id="modal-buy__expiration01">
+                <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
+                  id="modal-buy__expiration02">
               </div>
 
               <div class="modal__field">
@@ -705,7 +743,8 @@
 
               <div class="modal__field">
                 <label class="modal-buy__city-label" for="modal-buy__city">City / Town</label>
-                <input class="modal-buy__city-input modal-input" type="text" name="modal-buy__city" id="modal-buy__city">
+                <input class="modal-buy__city-input modal-input" type="text" name="modal-buy__city"
+                  id="modal-buy__city">
               </div>
             </div>
 
@@ -716,11 +755,15 @@
             </div>
           </form>
 
-          <p class="modal-buy__text">If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+          <p class="modal-buy__text">If you are live, work, attend school, or pay property taxes in New York State, you
+            can get a $25 digital library card right now using this online form. Visitors to New York State can also use
+            this form to apply for a temporary card.
           </p>
         </div>
-      <button class="modal-buy__button-close"></button>
+        <button class="modal-buy__button-close"></button>
+      </div>
     </div>
+
   </div>
   <script src="./src/scripts/script.js"></script>
   <script src="./src/scripts/index.js"></script>

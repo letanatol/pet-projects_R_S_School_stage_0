@@ -1012,7 +1012,7 @@ h3 {
   height: 272px;
   padding: 20px 20px 25px;
   background: #bb945f;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .find__form-title {
@@ -1068,7 +1068,9 @@ h3 {
 
 .find__form-button {
   display: block;
+  /* display: none; */
   margin: 0 auto;
+  margin-top: 20px;
   min-height: 44px;
   padding: 5px 38px;
   border-radius: 2px;
@@ -1083,10 +1085,37 @@ h3 {
   cursor: pointer;
 }
 
+.library-cards__info {
+  display: none;
+  /* display: flex; */
+  gap: 35px;
+  width: 169px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.library-cards__info .info-card__title {
+  font-size: 10px;
+}
+
+.library-cards__info .info-card {
+  gap: 0;
+}
+
 @media (max-width: 480px) {
   .find__form-button {
     font-size: 14px;
   }
+}
+
+.library-cards__get {
+  display: none;
+  display: block;
+}
+
+.library-cards__visit {
+  /* display: block; */
+  display: none;
 }
 
 .get__title {
@@ -1302,337 +1331,354 @@ h3 {
   }
 }
 
+/* !modal */
 
-/* !modal-login  */
-
-.modal__container {
-  position: relative;
-  width: 250px;
-  background-color: #ffffff;
+.modal-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.modal-overlay {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
 }
 
-.modal-login {
-  padding: 20px 25px;
-  height: 262px;
-}
+  /* !modal-login  */
 
-.modal__title {
-  text-align: center;
-  font-family: Forum;
-  line-height: 20px;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
+  .modal__container {
+    position: relative;
+    width: 250px;
+    background-color: #ffffff;
+  }
 
-.modal__fields {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 0.3px;
-  margin-bottom: 20px;
-}
+  .modal-login {
+    padding: 20px 25px;
+    height: 262px;
+    background-color: #fff;
+  }
 
-.modal-field {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+  .modal__title {
+    text-align: center;
+    font-family: Forum;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
 
-.modal-input {
-  width: 200px;
-  height: 20px;
-  font-size: 15px;
-  line-height: 1.33;
-  letter-spacing: 0.3px;
-  border: 1px solid #bb945f;
-  outline: none;
-}
+  .modal__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+  }
 
-.modal-login__button {
-  width: 75px;
-  height: 30px;
-  background-color: transparent;
-  border: 1px solid #0c0c0e;
-  border-radius: 2px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
+  .modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.modal__question {
-  display: inline-block;
-  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
-  font-family: Inter;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-right: 5px;
-}
+  .modal-input {
+    width: 200px;
+    height: 20px;
+    font-size: 15px;
+    line-height: 1.33;
+    letter-spacing: 0.3px;
+    border: 1px solid #bb945f;
+    outline: none;
+  }
 
-.modal-login__button-register {
-  cursor: pointer;
-  font-family: Inter;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-decoration-line: underline;
-}
+  .modal-login__button {
+    width: 75px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #0c0c0e;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
 
-.modal__button-close {
-  position: absolute;
-  top: 13px;
-  right: 13px;
-  width: 19px;
-  height: 19px;
-  background: url(../images/profile/close_btn.svg);
-  cursor: pointer;
-}
+  .modal__question {
+    display: inline-block;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 5px;
+  }
 
-/* !modal-login  */
+  .modal-login__button-register {
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+  }
 
-.modal-register {
-  padding: 20px 25px;
-  height: 382px;
-}
+  .modal__button-close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 19px;
+    height: 19px;
+    background: url(../images/profile/close_btn.svg);
+    cursor: pointer;
+  }
 
-.modal-register__button {
-  width: 75px;
-  height: 30px;
-  background-color: transparent;
-  border: 1px solid #0c0c0e;
-  border-radius: 2px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
+  /* !modal-login  */
 
+  .modal-register {
+    padding: 20px 25px;
+    height: 382px;
+    background-color: #fff;
+  }
 
-/* !modal-my-profile */
-
-.modal-profile__container {
-  position: relative;
-  width: 600px;
-  height: 400px;
-}
-
-.modal-profile {
-  display: flex;
-}
-
-.modal-profile__name {
-  display: flex;
-  gap: 15px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  max-height: 100%;
-  padding: 0 25px;
-  background-color: #0c0c0e;
-}
-
-.modal-profile__initials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  background-color: #ffffff;
-  color: #BB945F;
-  line-height: 20px;
-  text-transform: capitalize;
-}
-
-.modal-profile__surname {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 30px;
-  background-color: #ffffff;
-}
-
-.modal-profile__content {
-  padding: 40px 20px;
-}
-
-.modal-profile__title {
-  font-family: Forum;
-  font-size: 40px;
-  line-height: 20px;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-}
-
-.modal-profile__info {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.info-card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-
-.info-card__title {
-  line-height: 20px;
-  letter-spacing: 0.4px;
-  text-transform: capitalize;
-}
-
-.info-card__amount {
-  font-size: 10px;
-  line-height: 20px;
-  letter-spacing: 0.2px;
-  text-transform: capitalize;
-}
-
-.info-card__icon-visits {
-  background: url(../images/profile/visits.svg);
-  width: 20px;
-  height: 21px;
-}
-
-.info-card__icon-bonuses {
-  background: url(../images/profile/bonuses.svg);
-  width: 20px;
-  height: 21px;
-}
-
-.info-card__icon-books {
-  background: url(../images/profile/books.svg);
-  width: 20px;
-  height: 21px;
-}
-
-.rented-books__title {
-  color: #0c0c0e;
-  font-size: 25px;
-  line-height: 20px;
-  margin-bottom: 30px;
-}
-
-.rented-books__list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-left: 30px;
-  margin-bottom: 40px;
-}
-
-.rented-books__item {
-  list-style: disc;
-  line-height: 20px;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-}
-
-.modal-profile__card {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.card__number {
-  color: #BB945F;
-  line-height: 20px;
-}
-
-.modal-profile__button-copy {
-  background: url(../images/profile/icon_copy.svg);
-  width: 14px;
-  height: 12px;
-}
+  .modal-register__button {
+    width: 75px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #0c0c0e;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
 
 
-/* ! modal buy a library card*/
+  /* !modal-my-profile */
 
-.modal-buy__container {
-  position: relative;
-  max-width: 650px;
-}
+  .modal-profile__container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+  }
 
-.modal-buy__title {
-  color: #FFF;
-  text-align: center;
-  font-family: Forum;
-  font-size: 40px;
-  line-height: 20px;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  background-color: #0c0c0e;
-  padding: 20px 0;
-}
+  .modal-profile {
+    display: flex;
+    background-color: #fff;
+  }
 
-.modal-buy__content {
-  padding: 30px 40px 40px;
-  display: flex;
-  gap: 40px;
-}
+  .modal-profile__name {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    max-height: 100%;
+    padding: 0 25px;
+    background-color: #0c0c0e;
+  }
 
-.modal__field {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+  .modal-profile__initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    color: #BB945F;
+    line-height: 20px;
+    text-transform: capitalize;
+  }
 
-.modal-buy__expiration-input {
-  display: inline;
-  width: 45px;
-}
+  .modal-profile__surname {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    background-color: #ffffff;
+  }
 
-.modal-buy__cvc-input {
-  width: 45px;
-}
+  .modal-profile__content {
+    padding: 40px 20px;
+    background-color: #ffffff;
+  }
 
-.modal-buy__buy {
-  display: flex;
-  align-items: end;
-  gap: 25px;
-}
+  .modal-profile__title {
+    font-family: Forum;
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
 
-.modal-buy__button {
-  width: 75px;
-  height: 30px;
-  background-color: transparent;
-  border: 1px solid #0c0c0e;
-  border-radius: 2px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
+  .modal-profile__info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
 
-.modal-buy__price {
-  color: #0c0c0e;
-  font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+  .info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
 
-.modal-buy__text {
-  color: #8E8E8E;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 2px;
-}
+  .info-card__title {
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+  }
 
-.modal-buy__button-close {
-  background: url(../images/profile/close_btn_white.svg);
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 19px;
-  height: 19px;
-  cursor: pointer;
-}
+  .info-card__amount {
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+  }
+
+  .info-card__icon-visits {
+    background: url(../images/profile/visits.svg);
+    width: 20px;
+    height: 21px;
+  }
+
+  .info-card__icon-bonuses {
+    background: url(../images/profile/bonuses.svg);
+    width: 20px;
+    height: 21px;
+  }
+
+  .info-card__icon-books {
+    background: url(../images/profile/books.svg);
+    width: 20px;
+    height: 21px;
+  }
+
+  .rented-books__title {
+    color: #0c0c0e;
+    font-size: 25px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .rented-books__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+    margin-bottom: 40px;
+  }
+
+  .rented-books__item {
+    list-style: disc;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .modal-profile__card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card__number {
+    color: #BB945F;
+    line-height: 20px;
+  }
+
+  .modal-profile__button-copy {
+    background: url(../images/profile/icon_copy.svg);
+    width: 14px;
+    height: 12px;
+  }
+
+
+  /* ! modal buy a library card*/
+
+  .modal-buy__container {
+    position: relative;
+    max-width: 650px;
+  }
+
+  .modal-buy__title {
+    color: #FFF;
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    background-color: #0c0c0e;
+    padding: 20px 0;
+  }
+
+  .modal-buy__content {
+    padding: 30px 40px 40px;
+    display: flex;
+    gap: 40px;
+    background-color: #fff;
+  }
+
+  .modal__field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-buy__expiration-input {
+    display: inline;
+    width: 45px;
+  }
+
+  .modal-buy__cvc-input {
+    width: 45px;
+  }
+
+  .modal-buy__buy {
+    display: flex;
+    align-items: end;
+    gap: 25px;
+  }
+
+  .modal-buy__button {
+    width: 75px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #0c0c0e;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .modal-buy__price {
+    color: #0c0c0e;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .modal-buy__text {
+    color: #8E8E8E;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+
+  .modal-buy__button-close {
+    background: url(../images/profile/close_btn_white.svg);
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+  }
