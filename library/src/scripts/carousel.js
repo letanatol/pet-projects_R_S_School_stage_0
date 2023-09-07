@@ -3,8 +3,8 @@ const carouselButtonPrev = document.querySelector('.carousel__button-prev');
 const carouselButtonNext = document.querySelector('.carousel__button-next');
 const carouselPagination = document.querySelector('.carousel__pagination');
 const paginationButtons = document.querySelectorAll('.pagination-button');
-console.log(paginationButtons);
-console.log(Array.from(paginationButtons));
+// console.log(paginationButtons);
+// console.log(Array.from(paginationButtons));
 
 // paginationButtons.addEventListener('click', event => {
 // console.log(event.target);

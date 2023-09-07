@@ -26,20 +26,27 @@
             <li class="navigation__item"><a class="navigation__link" href="#library-cards">Library Card</a></li>
           </ul>
         </nav>
-        <div class="header__icon icon"></div>
+        <div class="profile">
+          <div class="header__icon icon"></div>
+          <div class="drop-menu modal_state_close">
+            <div class="drop-menu__no-authorization">
+              <p class="drop-menu__title">Profile</p>
+              <button class="drop-menu__button drop-menu__button-login">Log In</button>
+              <button class="drop-menu__button drop-menu__button-register">Register</button>
+            </div>
+            <div class="drop-menu__authorization">
+              <p class="drop-menu__title">Profile</p>
+              <button class="drop-menu__button drop-menu__button-profile">My profile</button>
+              <button class="drop-menu__button drop-menu__button-logout">Log Out</button>
+            </div>
+          </div>
+
+        </div>
+
         <span class="header__hamburger hamburger">
           <span class="hamburger__line"></span>
         </span>
-        <div class="drop-menu drop-menu__no-authorization">
-          <p class="drop-menu__title">Profile</p>
-          <button class="drop-menu__button drop-menu__button-login">Log In</button>
-          <button class="drop-menu__button drop-menu__button-register">Register</button>
-        </div>
-        <div class="drop-menu drop-menu__authorization">
-          <p class="drop-menu__title">Profile</p>
-          <button class="drop-menu__button drop-menu__button-profile">My profile</button>
-          <button class="drop-menu__button drop-menu__button-logout">Log Out</button>
-        </div>
+
       </div>
     </header>
 
@@ -197,7 +204,7 @@
                 exploring how the Windsors have evolved and
                 thrived as the modern world has changed around them.
               </div>
-              <button class="favorites__book-button book-button-own" disabled>Own</button>
+              <button class="favorites__book-button">Buy</button>
               <div class="favorites__book-image">
                 <img src="./src/images/favorites/04.jpg" alt="The Last Queen" width="200" height="300">
               </div>
@@ -528,8 +535,8 @@
               <p class="get__content _content-end">You will be able to see a reader card after logging into account or
                 you can register a new account</p>
               <div class="get__buttons _content-end">
-                <button type="submit" class="get__button">Sign Up</button>
-                <button type="submit" class="get__button">Log in</button>
+                <button type="submit" class="get__button" id="library-cards-sign-up">Sign Up</button>
+                <button type="submit" class="get__button" id="library-cards-log-in">Log in</button>
               </div>
             </div>
             <div class="library-cards__visit get">
@@ -589,122 +596,118 @@
       </div>
     </footer>
     <!-- !modal-login -->
-    <div class="modal-overlay">
-      <div class="modal__container modal-hidden">
-        <div class="modal-login">
-          <form action="#" class="modal-login__form">
-            <div class="modal__title">Login</div>
-            <div class="modal__fields">
-              <div class="modal-field">
-                <label class="modal-login__email-label" for="login-email">E-mail or readers card</label>
-                <input class="modal-login__email-input modal-input" type="text" name="login-email" id="login-email">
-              </div>
-              <div class="modal-field">
-                <label class="modal-login__password-label" for="login-password">Password</label>
-                <input class="modal-login__password-input modal-input" type="password" name="login-password"
-                  id="login-password">
-              </div>
+    <div class="modal modal_state_close" id="modal-login">
+      <div class="modal-login">
+        <form action="#" class="modal-login__form" id="form-login">
+          <div class="modal__title">Login</div>
+          <div class="modal__fields">
+            <div class="modal-field">
+              <label class="modal-login__email-label" for="login-email">E-mail or readers card</label>
+              <input class="modal-login__email-input modal-input" type="text" name="login-email" id="login-email"
+                required>
             </div>
-            <button class="modal-login__button">Log In</button>
-          </form>
-          <div class="modal-login__register">
-            <p class="modal__question">Don’t have an account?</p>
-            <button class="modal-login__button-register">Register</button>
-          </div>
-          <button class="modal__button-close"></button>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- !modal-register -->
-    <div class="modal-overlay">
-      <div class="modal__container modal-hidden">
-        <div class="modal-register">
-          <form action="#" class="modal-register__form">
-            <div class="modal__title">Register</div>
-            <div class="modal__fields">
-              <div class="modal-field">
-                <label class="modal-register__first-name-label" for="first-name">First name</label>
-                <input class="modal-register__first-name-input modal-input" type="text" name="first-name"
-                  id="first-name">
-              </div>
-              <div class="modal-field">
-                <label class="modal-register__last-name-label" for="last-name">Last name</label>
-                <input class="modal-register__last-name-input modal-input" type="text" name="last-name" id="last-name">
-              </div>
-              <div class="modal-field">
-                <label class="modal-register__email-label" for="register-email">E-mail</label>
-                <input class="modal-register__email-input modal-input" type="text" name="register-email"
-                  id="register-email">
-              </div>
-              <div class="modal-field">
-                <label class="modal-register__password-label" for="register-password">Password</label>
-                <input class="modal-register__password-input modal-input" type="password" name="register-password"
-                  id="register-password">
-              </div>
-            </div>
-            <button class="modal-register__button">Sign Up</button>
-          </form>
-          <div class="modal-register__register">
-            <p class="modal__question">Already have an account?</p>
-            <button class="modal-register__button-register">Login</button>
-          </div>
-          <button class="modal__button-close"></button>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- !modal-my-profile -->
-    <div class="modal-overlay">
-      <div class="modal-profile__container modal-hidden">
-        <div class="modal-profile">
-          <div class="modal-profile__name">
-            <p class="modal-profile__initials">JD</p>
-            <p class="modal-profile__surname">John Doe</p>
-          </div>
-          <div class="modal-profile__content">
-            <div class="modal-profile__title">My profile</div>
-            <div class="modal-profile__info">
-              <div class="info-card">
-                <span class="info-card__title">Visits</span>
-                <div class="info-card__icon-visits"></div>
-                <span class="info-card__amount">23</span>
-              </div>
-              <div class="info-card">
-                <span class="info-card__title">Bonuses</span>
-                <div class="info-card__icon-bonuses"></div>
-                <span class="info-card__amount">1240</span>
-              </div>
-              <div class="info-card">
-                <span class="info-card__title">Books</span>
-                <div class="info-card__icon-books"></div>
-                <span class="info-card__amount">2</span>
-              </div>
-            </div>
-            <div class="modal-profile__rented-books">
-              <div class="rented-books__title">Rented books</div>
-              <ul class="rented-books__list">
-                <li class="rented-books__item">The Last Queen, Clive Irving</li>
-                <li class="rented-books__item">Dominicana, Angie Cruz</li>
-              </ul>
-            </div>
-            <div class="modal-profile__card">
-              <div class="card__title">Card number</div>
-              <div class="card__number">F00234030</div>
-              <button class="modal-profile__button-copy"></button>
+            <div class="modal-field">
+              <label class="modal-login__password-label" for="login-password">Password</label>
+              <input class="modal-login__password-input modal-input" type="password" name="login-password"
+                id="login-password" required minlength="8">
             </div>
           </div>
+          <button class="modal-login__button">Log In</button>
+        </form>
+        <div class="modal-login__register">
+          <p class="modal__question">Don’t have an account?</p>
+          <button class="modal-login__button-register">Register</button>
         </div>
         <button class="modal__button-close"></button>
       </div>
     </div>
 
 
+    <!-- !modal-register -->
+    <div class="modal modal_state_close" id="modal-register">
+      <div class="modal-register">
+        <form action="#" class="modal-register__form" id="form-register">
+          <div class="modal__title">Register</div>
+          <div class="modal__fields">
+            <div class="modal-field">
+              <label class="modal-register__first-name-label" for="firstName">First name</label>
+              <input class="modal-register__first-name-input modal-input" type="text" name="firstName" id="first-name"
+                required>
+            </div>
+            <div class="modal-field">
+              <label class="modal-register__last-name-label" for="lastName">Last name</label>
+              <input class="modal-register__last-name-input modal-input" type="text" name="lastName" id="last-name"
+                required>
+            </div>
+            <div class="modal-field">
+              <label class="modal-register__email-label" for="email">E-mail</label>
+              <input class="modal-register__email-input modal-input" type="text" name="email"
+                id="register-email" required>
+            </div>
+            <div class="modal-field">
+              <label class="modal-register__password-label" for="password">Password</label>
+              <input class="modal-register__password-input modal-input" type="password" name="password"
+                id="register-password" required minlength="8">
+            </div>
+          </div>
+          <button class="modal-register__button">Sign Up</button>
+        </form>
+        <div class="modal-register__register">
+          <p class="modal__question">Already have an account?</p>
+          <button class="modal-register__button-register">Login</button>
+        </div>
+        <button class="modal__button-close"></button>
+      </div>
+    </div>
+
+
+    <!-- !modal-my-profile -->
+    <div class="modal modal_state_close">
+      <div class="modal-profile">
+        <div class="modal-profile__name">
+          <p class="modal-profile__initials">JD</p>
+          <p class="modal-profile__surname">John Doe</p>
+        </div>
+        <div class="modal-profile__content">
+          <div class="modal-profile__title">My profile</div>
+          <div class="modal-profile__info">
+            <div class="info-card">
+              <span class="info-card__title">Visits</span>
+              <div class="info-card__icon-visits"></div>
+              <span class="info-card__amount">23</span>
+            </div>
+            <div class="info-card">
+              <span class="info-card__title">Bonuses</span>
+              <div class="info-card__icon-bonuses"></div>
+              <span class="info-card__amount">1240</span>
+            </div>
+            <div class="info-card">
+              <span class="info-card__title">Books</span>
+              <div class="info-card__icon-books"></div>
+              <span class="info-card__amount">2</span>
+            </div>
+          </div>
+          <div class="modal-profile__rented-books">
+            <div class="rented-books__title">Rented books</div>
+            <ul class="rented-books__list">
+              <li class="rented-books__item">The Last Queen, Clive Irving</li>
+              <li class="rented-books__item">Dominicana, Angie Cruz</li>
+            </ul>
+          </div>
+          <div class="modal-profile__card">
+            <div class="card__title">Card number</div>
+            <div class="card__number">F00234030</div>
+            <button class="modal-profile__button-copy"></button>
+          </div>
+        </div>
+      </div>
+      <button class="modal__button-close"></button>
+    </div>
+
+
     <!-- !modal-by a library card -->
-    <div class="modal-overlay">
-      <div class="modal-buy__container modal-hidden">
+    <div class="modal modal_state_close">
+      <div class="modal-buy">
         <div class="modal-buy__title">Buy a library card</div>
         <div class="modal-buy__content">
           <form action="#" class="modal-buy__form">
@@ -765,8 +768,9 @@
     </div>
 
   </div>
-  <script src="./src/scripts/script.js"></script>
-  <script src="./src/scripts/index.js"></script>
+  <script type="module" src="./src/scripts/index.js"></script>
+  <script src="./src/scripts/userIcon.js"></script>
+  <script src="./src/scripts/hamburger.js"></script>
   <script src="./src/scripts/carousel.js"></script>
 </body>
 

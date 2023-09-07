@@ -27,3 +27,12 @@ blackout.addEventListener('click', function () {
     blackout.classList.remove('_blackout__open');
   }
 });
+
+userIcon.addEventListener('click', function () {
+  if (navigationList.classList.contains('navigation__list-open')) {
+    navigationList.classList.remove('navigation__list-open');
+    hamburger.classList.remove('hamburger-open');
+    body.classList.remove("_scroll");
+    blackout.classList.remove('_blackout__open');
+  }
+});
