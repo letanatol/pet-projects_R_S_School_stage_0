@@ -243,6 +243,12 @@ h3 {
   line-height: 20px;
 }
 
+.header__icon-authorization:hover{
+  font-weight: 800;
+  background: #ffffff;
+  transition: all 0.4s;
+}
+
 /*! hamburger*/
 
 .header__hamburger {
@@ -354,6 +360,10 @@ h3 {
   background: #bb945f;
   left: calc(50% - 20px);
   top: 30px;
+}
+
+#drop-menu__title{
+  font-size: 12px;
 }
 
 .drop-menu__button {
@@ -1089,7 +1099,6 @@ h3 {
 
 .find__form-button {
   display: block;
-  /* display: none; */
   margin: 0 auto;
   margin-top: 20px;
   min-height: 44px;
@@ -1108,7 +1117,6 @@ h3 {
 
 .library-cards__info {
   display: none;
-  /* display: flex; */
   gap: 35px;
   width: 169px;
   margin: 0 auto;
@@ -1135,7 +1143,6 @@ h3 {
 }
 
 .library-cards__visit {
-  /* display: block; */
   display: none;
 }
 
@@ -1393,7 +1400,7 @@ h3 {
 .modal__fields {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0.3px;
@@ -1518,9 +1525,11 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 120px;
   min-height: 30px;
   background-color: #ffffff;
+  line-height: 30px;
 }
 
 .modal-profile__content {

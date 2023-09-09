@@ -29,13 +29,13 @@
         <div class="profile">
           <div class="header__icon icon"></div>
           <div class="drop-menu modal_state_close">
-            <div class="drop-menu__no-authorization">
+            <div class="drop-menu__no-authorization" id="drop-menu__no-authorization">
               <p class="drop-menu__title">Profile</p>
               <button class="drop-menu__button drop-menu__button-login">Log In</button>
               <button class="drop-menu__button drop-menu__button-register">Register</button>
             </div>
-            <div class="drop-menu__authorization">
-              <p class="drop-menu__title">Profile</p>
+            <div class="drop-menu__authorization" id="drop-menu__authorization">
+              <p class="drop-menu__title" id="drop-menu__title"></p>
               <button class="drop-menu__button drop-menu__button-profile">My profile</button>
               <button class="drop-menu__button drop-menu__button-logout">Log Out</button>
             </div>
@@ -506,9 +506,9 @@
                 <div class="find__form-body">
                   <p class="find__form-title">Brooklyn Public Library</p>
                   <input type="text" class="find__form-input" name="name" placeholder="Reader's name"
-                    pattern="^[A-Za-z0-9\-\s]+$" required>
+                    pattern="^[A-Za-z0-9\-\s]+$" required id="find__form-input-name">
                   <input type="text" class="find__form-input" name="number" placeholder="Card number"
-                    pattern="^[A-Za-z0-9\-\s]+$" required>
+                    pattern="^[A-Za-z0-9\-\s]+$" required id="find__form-input-number">
                 </div>
                 <button type="submit" class="find__form-button">Check the card</button>
                 <div class="library-cards__info">
@@ -598,18 +598,18 @@
     <!-- !modal-login -->
     <div class="modal modal_state_close" id="modal-login">
       <div class="modal-login">
-        <form action="#" class="modal-login__form" id="form-login">
+        <form action="#" class="modal-login__form" id="form-login" autocomplete="on">
           <div class="modal__title">Login</div>
           <div class="modal__fields">
             <div class="modal-field">
               <label class="modal-login__email-label" for="login-email">E-mail or readers card</label>
               <input class="modal-login__email-input modal-input" type="text" name="login-email" id="login-email"
-                required>
+                required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="characters@characters.domain" autocomplete="on">
             </div>
             <div class="modal-field">
               <label class="modal-login__password-label" for="login-password">Password</label>
               <input class="modal-login__password-input modal-input" type="password" name="login-password"
-                id="login-password" required minlength="8">
+                id="login-password" required pattern=".{8,}" title="Eight or more characters" autocomplete="on">
             </div>
           </div>
           <button class="modal-login__button">Log In</button>
@@ -626,7 +626,7 @@
     <!-- !modal-register -->
     <div class="modal modal_state_close" id="modal-register">
       <div class="modal-register">
-        <form action="#" class="modal-register__form" id="form-register">
+        <form action="#" class="modal-register__form" id="form-register" autocomplete="on">
           <div class="modal__title">Register</div>
           <div class="modal__fields">
             <div class="modal-field">
@@ -641,13 +641,14 @@
             </div>
             <div class="modal-field">
               <label class="modal-register__email-label" for="email">E-mail</label>
-              <input class="modal-register__email-input modal-input" type="text" name="email"
-                id="register-email" required>
+              <input class="modal-register__email-input modal-input" type="text" name="email" id="register-email"
+                required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="characters@characters.domain" autocomplete="on">
             </div>
             <div class="modal-field">
               <label class="modal-register__password-label" for="password">Password</label>
               <input class="modal-register__password-input modal-input" type="password" name="password"
-                id="register-password" required minlength="8">
+                id="register-password" required pattern=".{8,}" title="Eight or more characters"
+                autocomplete="on">
             </div>
           </div>
           <button class="modal-register__button">Sign Up</button>
@@ -662,11 +663,11 @@
 
 
     <!-- !modal-my-profile -->
-    <div class="modal modal_state_close">
+    <div class="modal modal_state_close" id="modal-profile">
       <div class="modal-profile">
         <div class="modal-profile__name">
-          <p class="modal-profile__initials">JD</p>
-          <p class="modal-profile__surname">John Doe</p>
+          <p class="modal-profile__initials"></p>
+          <p class="modal-profile__surname"></p>
         </div>
         <div class="modal-profile__content">
           <div class="modal-profile__title">My profile</div>
@@ -674,17 +675,17 @@
             <div class="info-card">
               <span class="info-card__title">Visits</span>
               <div class="info-card__icon-visits"></div>
-              <span class="info-card__amount">23</span>
+              <span class="info-card__amount" id="infoVisits"></span>
             </div>
             <div class="info-card">
               <span class="info-card__title">Bonuses</span>
               <div class="info-card__icon-bonuses"></div>
-              <span class="info-card__amount">1240</span>
+              <span class="info-card__amount" id="infoBonuses">1240</span>
             </div>
             <div class="info-card">
               <span class="info-card__title">Books</span>
               <div class="info-card__icon-books"></div>
-              <span class="info-card__amount">2</span>
+              <span class="info-card__amount" id="infoBooks"></span>
             </div>
           </div>
           <div class="modal-profile__rented-books">
@@ -701,12 +702,12 @@
           </div>
         </div>
       </div>
-      <button class="modal__button-close"></button>
+      <button class="modal__button-close" id="modal-profile__button-close"></button>
     </div>
 
 
     <!-- !modal-by a library card -->
-    <div class="modal modal_state_close">
+    <div class="modal modal_state_close" id="modal-buy">
       <div class="modal-buy">
         <div class="modal-buy__title">Buy a library card</div>
         <div class="modal-buy__content">
@@ -721,10 +722,13 @@
 
               <div class="modal__field">
                 <label class="modal-buy__expiration-label" for="modal-buy__expiration">Expiration code</label>
+                <div class="inputs_expiration">
                 <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
                   id="modal-buy__expiration01">
                 <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
                   id="modal-buy__expiration02">
+                </div>
+
               </div>
 
               <div class="modal__field">
@@ -769,7 +773,6 @@
 
   </div>
   <script type="module" src="./src/scripts/index.js"></script>
-  <script src="./src/scripts/userIcon.js"></script>
   <script src="./src/scripts/hamburger.js"></script>
   <script src="./src/scripts/carousel.js"></script>
 </body>

@@ -6,13 +6,12 @@ const signUpBtnDropMenu = document.querySelector('.drop-menu__button-register');
 
 const signUpBtnlibraryCards = document.getElementById('library-cards-sign-up');
 const modalRegister = document.getElementById('modal-register');
-const formRegister = document.getElementById('form-register');
 const closeBtnRegister = document.querySelector('.modal-register > .modal__button-close');
 
 const logInBtnlibraryCards = document.getElementById('library-cards-log-in');
 const modalLogin = document.getElementById('modal-login');
 const closeBtnLogin = document.querySelector('.modal-login > .modal__button-close');
-const bookBtn = document.querySelector('.favorites__book-button');
+const bookBtn = document.querySelectorAll('.favorites__book-button');
 
 
 // открыть дроп-меню:
@@ -38,8 +37,8 @@ hamburger.addEventListener('click', () => {
 // открыть модал регистрации в drop-menu:
 signUpBtnDropMenu.addEventListener('click', () => {
   openModal(modalRegister);
-
 })
+
 // открыть модал регистрации в cards:
 signUpBtnlibraryCards.addEventListener('click', () => {
   openModal(modalRegister);
@@ -67,7 +66,11 @@ logInBtnlibraryCards.addEventListener('click', () => {
 })
 
 // открыть модал login в books:
-
+bookBtn.forEach(button => {
+  button.addEventListener('click', () => {
+    openModal(modalLogin);
+  })
+})
 
 // закрыть модал login на крестик:
 closeBtnLogin.addEventListener('click', () => {
@@ -83,7 +86,7 @@ blackout.addEventListener('click', () => {
 
 
 
- // если клик не по drop-menu, его нужно закрыть
+// если клик не по drop-menu, его нужно закрыть
 function closeDropMenu(elem) {
   if (elem.target !== userIcon) {
     dropMenu.classList.add("modal_state_close");
@@ -95,9 +98,5 @@ document.addEventListener("click", closeDropMenu);
 
 
 
-// обработать ввод данных в форме регистрации
-formRegister.addEventListener('submit', (event => {
-  event.preventDefault();
-  console.log(event.currentTarget.firstName.value);
-}))
+
 
