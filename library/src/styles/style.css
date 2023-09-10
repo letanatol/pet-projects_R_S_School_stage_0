@@ -1446,13 +1446,14 @@ h3 {
   margin-right: 5px;
 }
 
-.modal-login__button-register {
+.modal-login__button-register, .modal-register__button-login {
   cursor: pointer;
   font-family: Inter;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
   text-decoration-line: underline;
+  background-color: transparent;
 }
 
 .modal__button-close {

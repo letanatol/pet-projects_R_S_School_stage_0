@@ -1,17 +1,25 @@
 import { closeModal, openModal } from './modals.js';
+import { getUsersData } from './registration.js';
 
 const dropMenu = document.querySelector('.drop-menu');
-const loginBtnDropMenu = document.querySelector('.drop-menu__button-login');
-const signUpBtnDropMenu = document.querySelector('.drop-menu__button-register');
 
-const signUpBtnlibraryCards = document.getElementById('library-cards-sign-up');
+const signUpBtnDropMenu = document.querySelector('.drop-menu__button-register');
+const modalRegisterButtonLogin = document.querySelector('.modal-register__button-login');
+const signUpButtonLibraryCards = document.getElementById('library-cards-sign-up');
 const modalRegister = document.getElementById('modal-register');
 const closeBtnRegister = document.querySelector('.modal-register > .modal__button-close');
 
-const logInBtnlibraryCards = document.getElementById('library-cards-log-in');
+const loginBtnDropMenu = document.querySelector('.drop-menu__button-login');
+const modalLoginButtonRegister = document.querySelector('.modal-login__button-register');
+const loginButtonLibraryCards = document.getElementById('library-cards-log-in');
 const modalLogin = document.getElementById('modal-login');
 const closeBtnLogin = document.querySelector('.modal-login > .modal__button-close');
-const bookBtn = document.querySelectorAll('.favorites__book-button');
+
+
+const favoritesBooks = document.getElementById('favorites__books');
+const modalBuy = document.getElementById('modal-buy');
+const closeBtnModalBuy = document.querySelector('.modal-buy > .modal-buy__button-close');
+const modalBuyButton = document.querySelector('.modal-buy__button'); //todo
 
 
 // открыть дроп-меню:
@@ -39,8 +47,14 @@ signUpBtnDropMenu.addEventListener('click', () => {
   openModal(modalRegister);
 })
 
+// открыть модал регистрации в login modal:
+modalLoginButtonRegister.addEventListener('click', () => {
+  openModal(modalRegister);
+  modalLogin.classList.replace('modal_state_open', 'modal_state_close');
+})
+
 // открыть модал регистрации в cards:
-signUpBtnlibraryCards.addEventListener('click', () => {
+signUpButtonLibraryCards.addEventListener('click', () => {
   openModal(modalRegister);
 })
 
@@ -58,18 +72,18 @@ blackout.addEventListener('click', () => {
 // открыть модал login в drop-menu:
 loginBtnDropMenu.addEventListener('click', () => {
   openModal(modalLogin);
-
 })
-// открыть модал login в cards:
-logInBtnlibraryCards.addEventListener('click', () => {
+
+// открыть модал login в modal Register:
+modalRegisterButtonLogin.addEventListener('click', () => {
   openModal(modalLogin);
+  modalRegister.classList.replace('modal_state_open', 'modal_state_close');
 })
 
-// открыть модал login в books:
-bookBtn.forEach(button => {
-  button.addEventListener('click', () => {
-    openModal(modalLogin);
-  })
+
+// открыть модал login в cards:
+loginButtonLibraryCards.addEventListener('click', () => {
+  openModal(modalLogin);
 })
 
 // закрыть модал login на крестик:
@@ -82,10 +96,6 @@ blackout.addEventListener('click', () => {
   closeModal(modalLogin);
 })
 
-
-
-
-
 // если клик не по drop-menu, его нужно закрыть
 function closeDropMenu(elem) {
   if (elem.target !== userIcon) {
@@ -94,6 +104,30 @@ function closeDropMenu(elem) {
 }
 
 document.addEventListener("click", closeDropMenu);
+
+// кнопка buy в favorites__book
+favoritesBooks.addEventListener('click', event => {
+  if (event.target.classList.contains('favorites__book-button')) {
+    const userCurrentData = getUsersData('userCurrentData');
+
+    if (userCurrentData) {
+      openModal(modalBuy);
+    } else {
+      openModal(modalLogin);
+    }
+  }
+})
+
+//3 закрыть модалку  buy card в books:
+  blackout.addEventListener('click', () => {
+    closeModal(modalBuy);
+  })
+
+  //3 закрыть модалку buy card на крестик:
+  closeBtnModalBuy.addEventListener('click', () => {
+    closeModal(modalBuy);
+  })
+
 
 
 

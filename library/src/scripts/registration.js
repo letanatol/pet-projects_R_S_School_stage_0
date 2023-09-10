@@ -1,16 +1,13 @@
 import { closeModal, openModal } from "./modals.js";
 
 const formRegister = document.getElementById('form-register');
-const modalLogin = document.getElementById('modal-login');
 const modalRegister = document.getElementById('modal-register');
+
 const userIcon = document.querySelector('.icon');
 const dropMenuNoAuthorization = document.getElementById('drop-menu__no-authorization');
 const dropMenuAuthorization = document.getElementById('drop-menu__authorization');
 const dropMenuTitle = document.getElementById('drop-menu__title');
-const bookBtn = document.querySelectorAll('.favorites__book-button');
-const modalBuy = document.getElementById('modal-buy');
-const closeBtnModalBuy = document.querySelector('.modal-buy > .modal-buy__button-close');
-const modalBuyButton = document.querySelector('.modal-buy__button'); //todo
+
 const dropMenuButtonProfile = document.querySelector('.drop-menu__button-profile');
 const modalProfile = document.getElementById('modal-profile');
 const modalProfileInitials = document.querySelector('.modal-profile__initials');
@@ -19,7 +16,9 @@ const infoVisits = document.getElementById('infoVisits');
 const infoBooks = document.getElementById('infoBooks');
 const modalProfileCardNumber = document.getElementById('modal-profile-card-number');
 const closeBtnModalProfile = document.getElementById('modal-profile__button-close');
+
 const dropMenuButtonLogout = document.querySelector('.drop-menu__button-logout');
+
 const findTitle = document.querySelector('.find__title');
 const findFormInputName = document.getElementById('find__form-input-name');
 const findFormInputNumber = document.getElementById('find__form-input-number');
@@ -32,6 +31,7 @@ const infoVisitsCard = document.getElementById('infoVisitsCard');
 const infoBooksCard = document.getElementById('infoBooksCard');
 const libraryCardsButtonProfile = document.getElementById('get-button-profile');
 
+const modalLogin = document.getElementById('modal-login');
 
 formRegister.addEventListener('submit', submit);
 
@@ -78,23 +78,6 @@ function renderAuthorizedUI() {
   dropMenuNoAuthorization.style.display = 'none';
   dropMenuAuthorization.style.display = 'block';
   dropMenuTitle.textContent = cardNumber;
-
-  // 3 открыть модалку  buy card в books:
-  bookBtn.forEach(button => {
-    button.addEventListener('click', () => {
-      openModal(modalBuy);
-    })
-  })
-
-  //3 закрыть модалку  buy card в books:
-  blackout.addEventListener('click', () => {
-    closeModal(modalBuy);
-  })
-
-  //3 закрыть модалку buy card на крестик:
-  closeBtnModalBuy.addEventListener('click', () => {
-    closeModal(modalBuy);
-  })
 
   //4 открыть модалку profile
   dropMenuButtonProfile.addEventListener('click', () => {
