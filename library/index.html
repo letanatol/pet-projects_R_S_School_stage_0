@@ -506,11 +506,11 @@
                 <div class="find__form-body">
                   <p class="find__form-title">Brooklyn Public Library</p>
                   <input type="text" class="find__form-input" name="name" placeholder="Reader's name"
-                    pattern="^[A-Za-z0-9\-\s]+$" required id="find__form-input-name">
+                    pattern="^[A-Za-z0-9\-\s]+$" id="find__form-input-name">
                   <input type="text" class="find__form-input" name="number" placeholder="Card number"
-                    pattern="^[A-Za-z0-9\-\s]+$" required id="find__form-input-number">
+                    pattern="^[A-Za-z0-9\-\s]+$" id="find__form-input-number">
                 </div>
-                <button type="submit" class="find__form-button">Check the card</button>
+                <button class="find__form-button">Check the card</button>
                 <div class="library-cards__info">
                   <div class="info-card">
                     <span class="info-card__title">Visits</span>
@@ -757,7 +757,7 @@
 
 
             <div class="modal-buy__buy">
-              <button class="modal-buy__button">Buy</button>
+              <button class="modal-buy__button" disabled>Buy</button>
               <p class="modal-buy__price">$&nbsp;25.00</p>
             </div>
           </form>
