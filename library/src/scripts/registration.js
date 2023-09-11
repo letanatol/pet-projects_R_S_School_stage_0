@@ -17,8 +17,6 @@ const infoBooks = document.getElementById('infoBooks');
 const modalProfileCardNumber = document.getElementById('modal-profile-card-number');
 const closeBtnModalProfile = document.getElementById('modal-profile__button-close');
 
-const dropMenuButtonLogout = document.querySelector('.drop-menu__button-logout');
-
 const findTitle = document.querySelector('.find__title');
 const findFormInputName = document.getElementById('find__form-input-name');
 const findFormInputNumber = document.getElementById('find__form-input-number');
@@ -106,7 +104,7 @@ function renderAuthorizedUI() {
 
   // 5 digital card
   findTitle.textContent = 'Your Library card';
-  findFormInputName.value = firstName;
+  findFormInputName.value = `${firstName} ${lastName}`;
   findFormInputNumber.value = cardNumber;
   infoVisitsCard.innerHTML = visits;
   infoBooksCard.innerHTML = booksCount;
@@ -114,52 +112,7 @@ function renderAuthorizedUI() {
   libraryCardsInfo.style.display = 'flex';
   libraryCardsGet.style.display = 'none';
   libraryCardsVisit.style.display = 'block';
-
-  // log Out
-  // dropMenuButtonLogout.addEventListener('click', () => {
-  //   let userLogOut = getUserData(); //todo delete!!!!!!!!!!!!!!!!!!!!!!!!!
-  //   userLogOut.isAuthorized = false;
-  //   localStorage.setItem('currentUser', JSON.stringify(userLogOut));
-  //   renderUnknownUI();
-  // });
-
 }
-
-// function renderUnknownUI() {
-//   // 1 меняем инициалы на иконку
-//   userIcon.innerHTML = '';
-//   userIcon.classList.remove('header__icon-authorization');
-//   userIcon.removeAttribute("title");
-
-//   // 2 меняем модалку дроп-меню
-//   dropMenuNoAuthorization.style.display = 'block';
-//   dropMenuAuthorization.style.display = 'none';
-//   dropMenuTitle.textContent = '';
-
-//   // 3 открыть modalLogin в books:
-//   bookBtn.forEach(button => {
-//     button.addEventListener('click', () => {
-//       openModal(modalLogin);
-//     })
-//   })
-//   // 4 закрыть модалку modalLogin в books:
-//   blackout.addEventListener('click', () => {
-//     closeModal(modalBuy);
-//   })
-//   // закрыть модалку modalLogin на крестик:
-//   closeBtnModalBuy.addEventListener('click', () => {
-//     closeModal(modalBuy);
-//   })
-//   // digital card
-//   findTitle.textContent = 'Find your Library card';
-//   findFormInputName.value = '';
-//   findFormInputNumber.value = '';
-//   findFormButton.style.display = 'block';
-//   libraryCardsInfo.style.display = 'none';
-//   libraryCardsGet.style.display = 'block';
-//   libraryCardsVisit.style.display = 'none';
-// }
-
 
 export function saveUsersData(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
@@ -183,7 +136,6 @@ export function createIconInitials(firstName, lastName) {
   userIcon.innerHTML = firstName.slice(0, 1).toUpperCase() + lastName.slice(0, 1).toUpperCase();
   userIcon.classList.add('header__icon-authorization');
   userIcon.title = `${firstName} ${lastName}`;
-  console.log('я выполнилась');
 }
 
 export function createIconInitialsForProfile(firstName, lastName) {
