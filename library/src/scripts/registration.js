@@ -56,16 +56,16 @@ function submit(event) {
 
   const users = getUsersData('users');
   if (users) {
-    saveUsersData('users', [...users, userCurrentData]);
+    saveUsersData('users', [...users, { ...userCurrentData }]);
   } else {
-    saveUsersData('users', [userCurrentData]);
+    saveUsersData('users', [{ ...userCurrentData }]);
   }
 
   closeModal(modalRegister);
   renderAuthorizedUI();
 }
 
-function renderAuthorizedUI() {
+export function renderAuthorizedUI() {
   const userCurrentData = getUsersData('userCurrentData');
   const { firstName, lastName, cardNumber, visits, booksCount } = userCurrentData;
 
