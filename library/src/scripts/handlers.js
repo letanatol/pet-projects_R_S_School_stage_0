@@ -110,7 +110,11 @@ favoritesBooks.addEventListener('click', event => {
   if (event.target.classList.contains('favorites__book-button')) {
     const userCurrentData = getUsersData('userCurrentData');
 
-    if (userCurrentData) {
+    if (userCurrentData && userCurrentData.isCardLibrary === true) {
+      event.target.classList.add('book-button-own');
+      event.target.innerHTML = "Own";
+      event.target.setAttribute('disabled', 'disabled');
+    } else if (userCurrentData) {
       openModal(modalBuy);
     } else {
       openModal(modalLogin);
@@ -119,14 +123,14 @@ favoritesBooks.addEventListener('click', event => {
 })
 
 //3 закрыть модалку  buy card в books:
-  blackout.addEventListener('click', () => {
-    closeModal(modalBuy);
-  })
+blackout.addEventListener('click', () => {
+  closeModal(modalBuy);
+})
 
-  //3 закрыть модалку buy card на крестик:
-  closeBtnModalBuy.addEventListener('click', () => {
-    closeModal(modalBuy);
-  })
+//3 закрыть модалку buy card на крестик:
+closeBtnModalBuy.addEventListener('click', () => {
+  closeModal(modalBuy);
+})
 
 
 

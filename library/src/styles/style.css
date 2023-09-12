@@ -811,7 +811,7 @@ h3 {
 }
 
 @media(hover: hover) {
-  .favorites__book-button:hover:not(:disabled) {
+  .favorites__book-button:not([disabled]):hover {
     border: 1px solid #bb945f;
     background: #bb945f;
     transition: all 0.4s;
@@ -1636,7 +1636,7 @@ h3 {
 
 .modal-buy {
   position: relative;
-  max-width: 650px;
+  width: 640px;
 }
 
 .modal-buy__title {
