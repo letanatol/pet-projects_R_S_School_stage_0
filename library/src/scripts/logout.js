@@ -90,6 +90,7 @@ function submitFindCard(event) {
       setTimeout(() => {
         findFormButton.style.display = 'block';
         libraryCardsInfo.style.display = 'none';
+        event.target.reset();
       }, 10000);
     } else {
       return;
