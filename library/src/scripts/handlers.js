@@ -16,7 +16,7 @@ const modalLogin = document.getElementById('modal-login');
 const closeBtnLogin = document.querySelector('.modal-login > .modal__button-close');
 
 
-const favoritesBooks = document.getElementById('favorites__books');
+const favoritesBooks = document.getElementById('favorites-books');
 const modalBuy = document.getElementById('modal-buy');
 const closeBtnModalBuy = document.querySelector('.modal-buy > .modal-buy__button-close');
 const modalBuyButton = document.querySelector('.modal-buy__button'); //todo
@@ -105,7 +105,7 @@ function closeDropMenu(elem) {
 
 document.addEventListener("click", closeDropMenu);
 
-// кнопка buy в favorites__book
+// кнопка buy в favorites__book // существует data-Btn-Id
 favoritesBooks.addEventListener('click', event => {
   if (event.target.classList.contains('favorites__book-button')) {
     const userCurrentData = getUsersData('userCurrentData');
@@ -114,6 +114,7 @@ favoritesBooks.addEventListener('click', event => {
       event.target.classList.add('book-button-own');
       event.target.innerHTML = "Own";
       event.target.setAttribute('disabled', 'disabled');
+      // положить в local
     } else if (userCurrentData) {
       openModal(modalBuy);
     } else {

@@ -24,9 +24,9 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   display: block;
-  overflow: hidden;
 }
 
 a {
@@ -243,7 +243,7 @@ h3 {
   line-height: 20px;
 }
 
-.header__icon-authorization:hover{
+.header__icon-authorization:hover {
   font-weight: 800;
   background: #ffffff;
   transition: all 0.4s;
@@ -362,7 +362,7 @@ h3 {
   top: 30px;
 }
 
-#drop-menu__title{
+#drop-menu__title {
   font-size: 12px;
 }
 
@@ -445,53 +445,54 @@ h3 {
   margin-bottom: 20px;
 }
 
+/*! carousel*/
+
 .about__carousel {
-  /* display: flex; */
-  /* gap: 25px; */
+  display: flex;
+  align-items: center;
+  gap: 25px;
   margin-bottom: 37px;
 }
 
-/*! carousel*/
-
-.carousel {
-  text-align: center;
-}
-
 .carousel__wrapper {
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 40px;
+  align-items: center;
+  overflow: hidden;
 }
 
 .carousel__line {
   display: flex;
+  justify-content: center;
   gap: 25px;
   position: relative;
-  left: 0;
-  width: 1400px;
+  left: 475px;
   transition: 1s;
+  width: 1440px;
+}
+
+@media(max-width: 1400px) {
+  .carousel__line {
+    max-width: 1400px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .carousel__line {
+    width: 450px;
+    left: 950px;
+  }
 }
 
 .carousel__line img {
-  flex-shrink: 0;
-  width: 450px;
   height: 560px;
+  width: 450px;
 }
 
-/* @media(max-width: 1024px) {
-  .about__carousel {
-    justify-content: center;
-    align-items: center;
-    max-width: 614px;
-    column-gap: 58px;
-  }
-} */
 
-/* @media(max-width: 620px) {
+@media(max-width: 620px) {
   .about__carousel {
     column-gap: 26px;
   }
-} */
+}
 
 .carousel__button {
   display: none;
@@ -502,25 +503,17 @@ h3 {
   background-color: #ffffff;
 }
 
-/* @media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
   .carousel__button {
     display: flex;
+    cursor: pointer;
   }
-} */
+}
 
-/* .about__image-04,
-.about__image-05 {
-  display: none;
-} */
-
-/* @media (max-width: 1024px) {
-
-  .about__image-02,
-  .about__image-03 {
-    display: none;
-  }
-} */
+.pagination-item {
+  pointer-events: none;
+}
 
 .carousel__pagination {
   display: flex;
@@ -543,13 +536,13 @@ h3 {
   display: none;
 }
 
-/* @media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
   .pagination-button:nth-child(4),
   .pagination-button:nth-child(5) {
     display: block;
   }
-} */
+}
 
 .pagination-item {
   display: inline-block;
@@ -1446,7 +1439,8 @@ h3 {
   margin-right: 5px;
 }
 
-.modal-login__button-register, .modal-register__button-login {
+.modal-login__button-register,
+.modal-register__button-login {
   cursor: pointer;
   font-family: Inter;
   font-size: 10px;
