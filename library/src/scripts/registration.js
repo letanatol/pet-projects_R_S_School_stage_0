@@ -29,8 +29,6 @@ const infoVisitsCard = document.getElementById('infoVisitsCard');
 const infoBooksCard = document.getElementById('infoBooksCard');
 const libraryCardsButtonProfile = document.getElementById('get-button-profile');
 
-const modalLogin = document.getElementById('modal-login');
-
 formRegister.addEventListener('submit', submit);
 
 function submit(event) {
@@ -61,6 +59,7 @@ function submit(event) {
     saveUsersData('users', [{ ...userCurrentData }]);
   }
 
+  event.target.reset();
   closeModal(modalRegister);
   renderAuthorizedUI();
 }
