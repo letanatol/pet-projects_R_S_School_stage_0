@@ -53,7 +53,7 @@ function submit(event) {
   saveUsersData('userCurrentData', userCurrentData); // использование данных для renderAuthorizedUI
 
   const users = getUsersData('users');
-  if (users) {
+  if (users) { // todo сделать проверку на уже существующий user
     saveUsersData('users', [...users, { ...userCurrentData }]);
   } else {
     saveUsersData('users', [{ ...userCurrentData }]);
@@ -142,8 +142,12 @@ export function createIconInitialsForProfile(firstName, lastName) {
   modalProfileSurname.innerHTML = `${firstName} ${lastName}`;
 }
 
-//! window onload
+
+
+//! window.onload = function() 
+
 // function updatePage() {
+//   renderFavorites();
 //   if (isUserAuthorized) {
 //     renderAuthorizedUI();
 //   } else {
@@ -151,4 +155,8 @@ export function createIconInitialsForProfile(firstName, lastName) {
 //   }
 // }
 
-// updatePage();
+// function renderFavorites(filterBy = 'winter') {
+  // favorites-books по id =>
+  // innerHTML массив favorites 
+  // если есть купленные книги на эти книги задизейбл
+// }

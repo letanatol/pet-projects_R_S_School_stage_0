@@ -87,23 +87,23 @@
                 <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
-            <div class="carousel__pagination">
-              <button class="pagination-button">
-                <span class="pagination-item pagination-item-selected"></span>
-              </button>
-              <button class="pagination-button">
-                <span class="pagination-item"></span>
-              </button>
-              <button class="pagination-button">
-                <span class="pagination-item"></span>
-              </button>
-              <button class="pagination-button">
-                <span class="pagination-item"></span>
-              </button>
-              <button class="pagination-button">
-                <span class="pagination-item"></span>
-              </button>
-            </div>
+          </div>
+          <div class="carousel__pagination">
+            <button class="pagination-button" id="pagination-01">
+              <span class="pagination-item pagination-item-selected"></span>
+            </button>
+            <button class="pagination-button" id="pagination-02">
+              <span class="pagination-item"></span>
+            </button>
+            <button class="pagination-button" id="pagination-03">
+              <span class="pagination-item"></span>
+            </button>
+            <button class="pagination-button" id="pagination-04">
+              <span class="pagination-item"></span>
+            </button>
+            <button class="pagination-button" id="pagination-05">
+              <span class="pagination-item"></span>
+            </button>
           </div>
         </div>
       </section>
@@ -146,7 +146,7 @@
             </ul>
           </div>
           <!-- <List books> -->
-          <div class="favorites__books" id="favorites__books">
+          <div class="favorites__books" id="favorites-books">
             <div class="favorites__book">
               <div class="favorites__book-title">Staff Picks</div>
               <div class="favorites__book-name">The Book Eaters</div>
@@ -642,13 +642,13 @@
             <div class="modal-field">
               <label class="modal-register__email-label" for="email">E-mail</label>
               <input class="modal-register__email-input modal-input" type="text" name="email" id="register-email"
-                required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="characters@characters.domain" autocomplete="on">
+                required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="characters@characters.domain"
+                autocomplete="on">
             </div>
             <div class="modal-field">
               <label class="modal-register__password-label" for="password">Password</label>
               <input class="modal-register__password-input modal-input" type="password" name="password"
-                id="register-password" required pattern=".{8,}" title="Eight or more characters"
-                autocomplete="on">
+                id="register-password" required pattern=".{8,}" title="Eight or more characters" autocomplete="on">
             </div>
           </div>
           <button class="modal-register__button">Sign Up</button>
@@ -716,24 +716,25 @@
 
               <div class="modal__field">
                 <label class="modal-buy__bank-label" for="modal-buy__bank">Bank card number</label>
-                <input class="modal-buy__bank-input modal-input" type="text" name="modal-buy__bank"
-                  id="modal-buy__bank" required pattern="(([0-9]{4}) ?){4}" title="XXXXXXXXXXXX or XXXX XXXX XXXX XXXX">
+                <input class="modal-buy__bank-input modal-input" type="text" name="modal-buy__bank" id="modal-buy__bank"
+                  required pattern="(([0-9]{4}) ?){4}" title="XXXXXXXXXXXX or XXXX XXXX XXXX XXXX">
               </div>
 
               <div class="modal__field">
                 <label class="modal-buy__expiration-label" for="modal-buy__expiration">Expiration code</label>
                 <div class="inputs_expiration">
-                <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
-                  id="modal-buy__expiration01" required pattern="(0[1-9]|1[0-2])" title="01 - 12">
-                <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
-                  id="modal-buy__expiration02" required pattern="([1-9]{2})" title="00 - 99">
+                  <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
+                    id="modal-buy__expiration01" required pattern="(0[1-9]|1[0-2])" title="01 - 12">
+                  <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
+                    id="modal-buy__expiration02" required pattern="([1-9]{2})" title="00 - 99">
                 </div>
 
               </div>
 
               <div class="modal__field">
                 <label class="modal-buy__cvc-label" for="modal-buy__cvc">CVC</label>
-                <input class="modal-buy__cvc-input modal-input" type="text" name="modal-buy__cvc" id="modal-buy__cvc" required pattern="([1-9]{3})" title="XXX">
+                <input class="modal-buy__cvc-input modal-input" type="text" name="modal-buy__cvc" id="modal-buy__cvc"
+                  required pattern="([1-9]{3})" title="XXX">
               </div>
 
               <div class="modal__field">
@@ -750,8 +751,8 @@
 
               <div class="modal__field">
                 <label class="modal-buy__city-label" for="modal-buy__city">City / Town</label>
-                <input class="modal-buy__city-input modal-input" type="text" name="modal-buy__city"
-                  id="modal-buy__city" required>
+                <input class="modal-buy__city-input modal-input" type="text" name="modal-buy__city" id="modal-buy__city"
+                  required>
               </div>
             </div>
 
