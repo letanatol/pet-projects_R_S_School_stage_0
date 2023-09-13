@@ -26,7 +26,7 @@ dropMenuButtonLogout.addEventListener('click', () => {
   renderUnknownUI();
 });
 
-function renderUnknownUI() {
+export function renderUnknownUI() {
   // 1 меняем инициалы на иконку
   userIcon.innerHTML = '';
   userIcon.classList.remove('header__icon-authorization');
