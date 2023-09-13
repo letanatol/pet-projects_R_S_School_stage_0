@@ -52,38 +52,3 @@ carouselButtonPrev.addEventListener('click', () => {
     carouselLine.style.left = positionRight + 475 + 'px';
   }
 })
-
-
-// const favorites1 = [
-//   {
-//     id: 1,
-//     title: 'Title1',
-//     filterBy: 'winter',
-//   },
-//   {
-//     id: 2,
-//     title: 'Title1',
-//     filterBy: 'winter',
-//   },
-// ]
-
-// const favorites2 = {
-//   winter: [
-//     {
-//       id: 1,
-//       title: 'Title1',
-//     },
-//     {
-//       id: 2,
-//       title: 'Title1',
-//     }],
-//   summer: [
-//     {
-//       id: 3,
-//       title: 'Title3',
-//     },
-//     {
-//       id: 4,
-//       title: 'Title4',
-//     }],
-// }

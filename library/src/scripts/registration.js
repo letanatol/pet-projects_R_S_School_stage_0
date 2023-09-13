@@ -1,4 +1,6 @@
 import { closeModal, openModal } from "./modals.js";
+import { renderUnknownUI } from "./logout.js";
+import { renderFavorites } from "./slider.js";
 
 const formRegister = document.getElementById('form-register');
 const modalRegister = document.getElementById('modal-register');
@@ -144,19 +146,14 @@ export function createIconInitialsForProfile(firstName, lastName) {
 
 
 
-//! window.onload = function() 
+window.addEventListener('load', updatePage);
 
-// function updatePage() {
-//   renderFavorites();
-//   if (isUserAuthorized) {
-//     renderAuthorizedUI();
-//   } else {
-//     renderUnknownUI();
-//   }
-// }
-
-// function renderFavorites(filterBy = 'winter') {
-  // favorites-books по id =>
-  // innerHTML массив favorites 
-  // если есть купленные книги на эти книги задизейбл
-// }
+function updatePage() {
+  renderFavorites();
+  const userCurrentData = getUsersData('userCurrentData');
+  if (userCurrentData) {
+    renderAuthorizedUI();
+  } else {
+    renderUnknownUI();
+  }
+}
