@@ -27,6 +27,7 @@ function submitLogin(event) {
   if (userCurrentData) {
     const { email, password, cardNumber } = userCurrentData;
     if (loginEmail === email || loginEmail === cardNumber && loginPassword === password) {
+      userCurrentData.visits = Number(userCurrentData.visits) + 1;
       saveUsersData('userCurrentData', userCurrentData)
 
     } else {
@@ -37,6 +38,7 @@ function submitLogin(event) {
     openModal(modalRegister);
     closeModal(modalLogin);
   }
+
 
   event.target.reset();
   closeModal(modalLogin);
