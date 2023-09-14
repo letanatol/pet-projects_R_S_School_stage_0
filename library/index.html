@@ -727,9 +727,9 @@
                 <label class="modal-buy__expiration-label" for="modal-buy__expiration">Expiration code</label>
                 <div class="inputs_expiration">
                   <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
-                    id="modal-buy__expiration01" required pattern="(0[1-9]|1[0-2])" title="01 - 12">
+                    id="modal-buy__expiration01" required pattern="(0[1-9]|1[0-2])" title="01 - 12" maxlength="2">
                   <input class="modal-buy__expiration-input modal-input" type="text" name="modal-buy__expiration"
-                    id="modal-buy__expiration02" required pattern="([1-9]{2})" title="00 - 99">
+                    id="modal-buy__expiration02" required pattern="([1-9]{2})" title="00 - 99" maxlength="2">
                 </div>
 
               </div>
@@ -737,7 +737,7 @@
               <div class="modal__field">
                 <label class="modal-buy__cvc-label" for="modal-buy__cvc">CVC</label>
                 <input class="modal-buy__cvc-input modal-input" type="text" name="modal-buy__cvc" id="modal-buy__cvc"
-                  required pattern="([1-9]{3})" title="XXX">
+                  required pattern="([1-9]{3})" title="XXX" maxlength="3">
               </div>
 
               <div class="modal__field">

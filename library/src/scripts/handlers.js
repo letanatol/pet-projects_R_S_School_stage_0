@@ -5,6 +5,7 @@ const blackout = document.querySelector(".blackout");
 const hamburger = document.querySelector('.hamburger');
 const userIcon = document.querySelector('.icon');
 const dropMenu = document.querySelector('.drop-menu');
+const dropMenuTitle = document.querySelector('.drop-menu__title');
 
 const signUpBtnDropMenu = document.querySelector('.drop-menu__button-register');
 const modalRegisterButtonLogin = document.querySelector('.modal-register__button-login');
