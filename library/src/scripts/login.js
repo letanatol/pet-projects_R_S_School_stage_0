@@ -42,14 +42,3 @@ function submitLogin(event) {
   closeModal(modalLogin);
   renderAuthorizedUI();
 }
-
-//! window onload
-// function updatePage() {
-//   if (isUserAuthorized) {
-//     renderAuthorizedUI();
-//   } else {
-//     renderUnknownUI();
-//   }
-// }
-
-// updatePage();

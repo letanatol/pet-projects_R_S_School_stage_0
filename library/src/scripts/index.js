@@ -4,3 +4,5 @@ import './logout.js';
 import './login.js';
 import './buyCard.js';
 import './slider.js';
+import './hamburger.js';
+import './carousel.js';

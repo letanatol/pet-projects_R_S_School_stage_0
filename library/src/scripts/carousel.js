@@ -40,14 +40,20 @@ carouselPagination.addEventListener('click', event => {
 carouselButtonNext.addEventListener('click', () => {
   position = window.getComputedStyle(carouselLine);
   let positionLeft = parseInt(position.left);
-  if (positionLeft >= -475) {
+  console.log(positionLeft);
+  if (positionLeft >= 1) {
     carouselLine.style.left = positionLeft - 475 + 'px';
+
+    if (positionLeft === -475) {
+      carouselButtonNext.setAttribute('disabled', 'disabled');
+    }
   }
 })
 
 carouselButtonPrev.addEventListener('click', () => {
   position = window.getComputedStyle(carouselLine);
   let positionRight = parseInt(position.left);
+  console.log(positionRight);
   if (positionRight < -474) {
     carouselLine.style.left = positionRight + 475 + 'px';
   }
