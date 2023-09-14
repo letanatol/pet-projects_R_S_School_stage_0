@@ -17,6 +17,7 @@ const modalProfileInitials = document.querySelector('.modal-profile__initials');
 const modalProfileSurname = document.querySelector('.modal-profile__surname');
 const infoVisits = document.getElementById('infoVisits');
 const infoBooks = document.getElementById('infoBooks');
+const rentedBooksList = document.querySelector('.rented-books__list');
 const modalProfileCardNumber = document.getElementById('modal-profile-card-number');
 const closeBtnModalProfile = document.getElementById('modal-profile__button-close');
 
@@ -42,6 +43,7 @@ function submit(event) {
   formData.set('visits', 1);
   formData.set('books', []);
   formData.set('booksCount', 0);
+  formData.set('bookId', '');
 
   const cardNumber = getCardNumber();
   formData.set('cardNumber', cardNumber);
@@ -86,7 +88,7 @@ function submit(event) {
 
 export function renderAuthorizedUI() {
   const userCurrentData = getUsersData('userCurrentData');
-  const { firstName, lastName, cardNumber, visits, booksCount } = userCurrentData;
+  const { firstName, lastName, cardNumber, visits, booksCount, bookId, books } = userCurrentData;
 
   // 1 меняем иконку на инициалы
   createIconInitials(firstName, lastName);
@@ -108,9 +110,18 @@ export function renderAuthorizedUI() {
 
   createIconInitialsForProfile(firstName, lastName);
   infoVisits.innerHTML = visits;
-  infoBooks.innerHTML = booksCount;
+  infoBooks.innerHTML = bookId.length;
   modalProfileCardNumber.innerHTML = cardNumber;
 
+  if (books) {
+    rentedBooksList.innerHTML = books.map(item => (
+
+      `<li class="rented-books__item">${item}</li>`
+
+    )).join(' ');
+
+  }
+  
   //4 закрыть модалку profile на крестик:
   closeBtnModalProfile.addEventListener('click', () => {
     closeModal(modalProfile);
