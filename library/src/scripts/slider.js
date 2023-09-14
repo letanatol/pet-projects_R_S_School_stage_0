@@ -1,3 +1,5 @@
+import { getUsersData } from "./registration.js";
+
 const favorites = {
   winter: [
     {
@@ -157,10 +159,10 @@ const favoritesBooks = document.getElementById('favorites-books');
 const seasonInputs = document.getElementsByName('season');
 const seasonList = document.getElementById('season-list');
 
-// {
-// seasonList.onchange((event) => {
-//   renderFavorites(event.target.value);
-// })
+
+seasonList.addEventListener('change', (event) => {
+  renderFavorites(event.target.value);
+})
 
 // for (let i = 0; i < seasonList.length; i++) {
 //   seasonInputs[i].addEventListener('change', (event) => {
@@ -168,17 +170,17 @@ const seasonList = document.getElementById('season-list');
 //   })
 // }
 
-for (let i = 0; i < seasonInputs.length; i++) {
-  seasonInputs[i].addEventListener('change', (event) => {
-    renderFavorites(event.target.value);
-  }) 
-}
+// for (let i = 0; i < seasonInputs.length; i++) {
+//   seasonInputs[i].addEventListener('change', (event) => {
+//     renderFavorites(event.target.value);
+//   }) 
+// }
 
 
 export function renderFavorites(filterBy = 'winter') {
   favoritesBooks.innerHTML = favorites[filterBy].map(item => (
 
-    `<div class="favorites__book" data-id=${item.id}>
+    `<div class="favorites__book" id=${item.id}>
       <p class="favorites__book-title">${item.title}</p>
       <p class="favorites__book-name">${item.name}</p>
       <p class="favorites__book-author">${item.author}</p>
@@ -189,6 +191,16 @@ export function renderFavorites(filterBy = 'winter') {
       </div>
     </div>`
   )).join(' ');
+
+  const userCurrentData = getUsersData('userCurrentData');
+  if (userCurrentData) {
+    const { bookId } = userCurrentData;
+    for (let i = 0; i < bookId.length; i++) {
+      document.getElementById(`${bookId[i]}`).children[4].classList.add('book-button-own');
+      document.getElementById(`${bookId[i]}`).children[4].innerHTML = "Own";
+    }
+  }
+
 
   // favorites-books по id =>
   // innerHTML массив favorites 
