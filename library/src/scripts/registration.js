@@ -2,6 +2,7 @@ import { closeModal, openModal } from "./modals.js";
 import { renderUnknownUI } from "./logout.js";
 import { renderFavorites } from "./slider.js";
 
+const blackout = document.querySelector(".blackout");
 const formRegister = document.getElementById('form-register');
 const modalRegister = document.getElementById('modal-register');
 
@@ -52,18 +53,35 @@ function submit(event) {
     userCurrentData[key] = value;
   }
 
-  saveUsersData('userCurrentData', userCurrentData); // использование данных для renderAuthorizedUI
-
+  // проверка на существование пользователя
   const users = getUsersData('users');
-  if (users) { // todo сделать проверку на уже существующий user
-    saveUsersData('users', [...users, { ...userCurrentData }]);
-  } else {
-    saveUsersData('users', [{ ...userCurrentData }]);
-  }
 
-  event.target.reset();
-  closeModal(modalRegister);
-  renderAuthorizedUI();
+  if (users) {
+    const emailCurrentUser = userCurrentData.email;
+
+    const emailLocalUser = users.find(item => {
+      return item.email === emailCurrentUser;
+    });
+    if (!emailLocalUser) {
+      saveUsersData('userCurrentData', userCurrentData); // использование данных для renderAuthorizedUI
+      saveUsersData('users', [...users, { ...userCurrentData }]);
+
+      event.target.reset();
+      closeModal(modalRegister);
+      renderAuthorizedUI();
+    } else {
+      console.log("Пользователь с таким email уже существует!");
+      event.target.reset();
+      closeModal(modalRegister);
+      renderUnknownUI();
+    }
+  } else {
+    saveUsersData('userCurrentData', userCurrentData); // использование данных для renderAuthorizedUI
+    saveUsersData('users', [{ ...userCurrentData }]);
+    event.target.reset();
+    closeModal(modalRegister);
+    renderAuthorizedUI();
+  }
 }
 
 export function renderAuthorizedUI() {

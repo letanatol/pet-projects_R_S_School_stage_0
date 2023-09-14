@@ -22,6 +22,14 @@ const infoBooksCard = document.getElementById('infoBooksCard');
 
 
 dropMenuButtonLogout.addEventListener('click', () => {
+  let userCurrentData = getUsersData('userCurrentData'); // получили из хранилища текущего user
+  const { email } = userCurrentData; // считали его email - по нему будем его искать
+  const users = getUsersData('users'); // [ {}, {}, {} ] // получили из хранилища всех юзеров, в том числе и текущего
+  const userCurrentIndex = users.findIndex(item => { // находим в массиве текущего пользователя
+    return item.email === email;
+  });
+  users.splice(userCurrentIndex, 1); // удаляем его из массива всех пользователей 
+  saveUsersData('users', [...users, { ...userCurrentData }]); // добавляем его и всех пользователей в хранилище
   saveUsersData('userCurrentData', null);
   renderUnknownUI();
 });

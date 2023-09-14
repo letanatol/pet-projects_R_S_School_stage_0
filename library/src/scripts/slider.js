@@ -205,6 +205,7 @@ export function renderFavorites(filterBy = 'winter') {
 
 
 
+
 // const favorites1 = [
 //   {
 //     id: 1,

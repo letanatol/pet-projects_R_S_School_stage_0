@@ -1,6 +1,9 @@
 import { closeModal, openModal } from './modals.js';
 import { getUsersData } from './registration.js';
 
+const blackout = document.querySelector(".blackout");
+const hamburger = document.querySelector('.hamburger');
+const userIcon = document.querySelector('.icon');
 const dropMenu = document.querySelector('.drop-menu');
 
 const signUpBtnDropMenu = document.querySelector('.drop-menu__button-register');
@@ -19,7 +22,6 @@ const closeBtnLogin = document.querySelector('.modal-login > .modal__button-clos
 const favoritesBooks = document.getElementById('favorites-books');
 const modalBuy = document.getElementById('modal-buy');
 const closeBtnModalBuy = document.querySelector('.modal-buy > .modal-buy__button-close');
-const modalBuyButton = document.querySelector('.modal-buy__button'); //todo
 
 
 // открыть дроп-меню:
@@ -40,7 +42,6 @@ blackout.addEventListener('click', () => {
 hamburger.addEventListener('click', () => {
   closeModal(dropMenu);
 })
-
 
 // открыть модал регистрации в drop-menu:
 signUpBtnDropMenu.addEventListener('click', () => {
@@ -68,7 +69,6 @@ blackout.addEventListener('click', () => {
   closeModal(modalRegister);
 })
 
-
 // открыть модал login в drop-menu:
 loginBtnDropMenu.addEventListener('click', () => {
   openModal(modalLogin);
@@ -79,7 +79,6 @@ modalRegisterButtonLogin.addEventListener('click', () => {
   openModal(modalLogin);
   modalRegister.classList.replace('modal_state_open', 'modal_state_close');
 })
-
 
 // открыть модал login в cards:
 loginButtonLibraryCards.addEventListener('click', () => {
@@ -114,6 +113,8 @@ favoritesBooks.addEventListener('click', event => {
       event.target.classList.add('book-button-own');
       event.target.innerHTML = "Own";
       event.target.setAttribute('disabled', 'disabled');
+      // userCurrentData.books = [...userCurrentData.books, ]
+
       // положить в local
     } else if (userCurrentData) {
       openModal(modalBuy);
@@ -132,9 +133,3 @@ blackout.addEventListener('click', () => {
 closeBtnModalBuy.addEventListener('click', () => {
   closeModal(modalBuy);
 })
-
-
-
-
-
-
