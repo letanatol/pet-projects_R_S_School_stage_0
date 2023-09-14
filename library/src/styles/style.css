@@ -57,10 +57,22 @@ h3 {
   margin: 0 auto;
   position: relative;
   /* не будет работать sticky из-за overflow: hidden; */
-  /* overflow: hidden; */ 
+  /* overflow: hidden; */
   background-color: #ffffff;
   min-height: 100%;
 }
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
 
 ._container {
   max-width: 1440px;
@@ -707,6 +719,7 @@ h3 {
   width: 550px;
   height: 555px;
   padding: 15px 0 13px 20px;
+  animation: ani 2s ease-in;
 }
 
 @media (max-width: 767px) {
@@ -825,6 +838,7 @@ h3 {
 .book-button-own {
   border-color: #bb945f;
   color: #bb945f;
+  pointer-events: none;
 }
 
 .book-button-own:disabled {
@@ -863,7 +877,8 @@ h3 {
 }
 
 .fade-out {
-  animation: fadeOut ease 5s;;
+  animation: fadeOut ease 5s;
+  ;
 }
 
 @keyframes fadeOut {
@@ -875,6 +890,7 @@ h3 {
     opacity: 0;
   }
 }
+
 /*------------------------- Coffee-Shop --------------------------------*/
 .coffee-shop__container {
   margin-bottom: 2px;
@@ -1639,6 +1655,10 @@ h3 {
   gap: 10px;
   padding-left: 30px;
   margin-bottom: 40px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  flex-wrap: nowrap;
+  height: 60px;
 }
 
 .rented-books__item {

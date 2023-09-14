@@ -1,5 +1,5 @@
 import { closeModal, openModal } from './modals.js';
-import { getUsersData } from './registration.js';
+import { getUsersData, saveUsersData } from './registration.js';
 
 const blackout = document.querySelector(".blackout");
 const hamburger = document.querySelector('.hamburger');
@@ -23,6 +23,7 @@ const closeBtnLogin = document.querySelector('.modal-login > .modal__button-clos
 const favoritesBooks = document.getElementById('favorites-books');
 const modalBuy = document.getElementById('modal-buy');
 const closeBtnModalBuy = document.querySelector('.modal-buy > .modal-buy__button-close');
+const bookButtonOwn = document.querySelector('.book-button-own');
 
 
 // открыть дроп-меню:
@@ -111,12 +112,25 @@ favoritesBooks.addEventListener('click', event => {
     const userCurrentData = getUsersData('userCurrentData');
 
     if (userCurrentData && userCurrentData.isCardLibrary === true) {
+
       event.target.classList.add('book-button-own');
       event.target.innerHTML = "Own";
-      event.target.setAttribute('disabled', 'disabled');
-      // userCurrentData.books = [...userCurrentData.books, ]
+      // event.target.setAttribute('disabled', 'disabled');
+      let selectedBook = `${event.target.parentElement.children[1].textContent}, ${event.target.parentElement.children[2].textContent.slice(3)}`;
 
-      // положить в local
+      if (userCurrentData.books) {
+        userCurrentData.books.push(selectedBook);
+      } else {
+        userCurrentData.books = [selectedBook];
+      }
+
+      if (userCurrentData.bookId) {
+        userCurrentData.bookId.push(event.target.parentElement.id);
+      } else {
+        userCurrentData.bookId = [event.target.parentElement.id];
+      }
+
+      saveUsersData('userCurrentData', userCurrentData);
     } else if (userCurrentData) {
       openModal(modalBuy);
     } else {
