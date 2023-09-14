@@ -9,10 +9,10 @@ formBuy.addEventListener('submit', submitBuy);
 
 function submitBuy(event) {
   event.preventDefault();
-  let userCurrentData = getUsersData('userCurrentData');
-  userCurrentData.isCardLibrary = true;
-  saveUsersData('userCurrentData', userCurrentData); 
-  // todo заменить массив со всеми объектами
+
+  let userCurrentData = getUsersData('userCurrentData'); // получили из хранилища текущего user
+  userCurrentData.isCardLibrary = true; // заменили у него данные
+  saveUsersData('userCurrentData', userCurrentData); // сохранили его в хранилище с измененными данными
   event.target.reset();
   closeModal(modalBuy)
 }
