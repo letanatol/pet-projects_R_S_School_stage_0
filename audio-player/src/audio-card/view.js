@@ -41,7 +41,7 @@ export class AudioCardView {
     }
 
     render = () => {
-        document.body.innerHTML = (
+        document.querySelector('.container').innerHTML = (
             `
             <img src="${this.track.imgPath}" id="background">
             <audio src="${this.track.audioSrc}" id="song"></audio>
