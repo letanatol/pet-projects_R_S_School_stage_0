@@ -5,7 +5,6 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
   background-color: #000000;
   display: flex;
   flex-direction: column;
@@ -51,7 +50,8 @@ body {
 #input-search {
   box-sizing: border-box;
   width: 100%;
-  font-size: 12px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 18px;
   padding: 8px 12px;
   border-radius: 25px;
   outline: none;
@@ -89,12 +89,30 @@ body {
   flex: 1 1 auto;
 }
 
+.main__photos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.main__photo {
+  width: 400px;
+  height: 260px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 5px 5px 15px #eda406;
+}
+
 .footer {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-color: rgba(234, 216, 216, 0.1);
+  border-top: 5px solid orange;
 }
 
 .footer__list {

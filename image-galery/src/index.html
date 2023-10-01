@@ -17,8 +17,8 @@
         <h1 class="header-title">Unsplash API</h1>
         <div class="header__search">
           <input id="input-search" name="input-search" type="text" placeholder="Search..." autocomplete="off" autofocus>
-          <div class="icon icon-cross state_close"></div>
-          <div class="icon icon-search"></div>
+          <div id="icon-cross" class="icon icon-cross state_close"></div>
+          <div id="icon-search" class="icon icon-search"></div>
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@
 
   <main class="main">
     <div class="_container">
-
+      <div class="main__photos" id="main-photos"></div>
     </div>
   </main>
 
@@ -47,8 +47,9 @@
         </ul>
       </div>
     </div>
-
   </footer>
+
+  <script type="module" src="./galery-cards/index.js"></script>
 </body>
 
 </html>
