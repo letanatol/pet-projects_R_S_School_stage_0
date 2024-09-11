@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My image-galery</title>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700" rel="stylesheet" />
+  <link rel="stylesheet" href="./galery-cards/style.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="_container">
+      <div class="header__wrapper">
+        <h1 class="header-title">Unsplash API</h1>
+        <div class="header__search">
+          <input id="input-search" name="input-search" type="text" placeholder="Search..." autocomplete="off" autofocus>
+          <div id="icon-cross" class="icon icon-cross state_close"></div>
+          <div id="icon-search" class="icon icon-search state_open"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="main">
+    <div class="_container">
+      <div class="main__photos" id="main-photos"></div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="_container">
+      <div class="footer__row">
+        <ul class="footer__list">
+          <li class="footer__item"><a href="https://github.com/letanatol/" target="_blank" class="footer__link"><img
+                src="../assets/icons/footer/github-svg.svg" alt="Logo GitHub" width="60" height="60"></a></li>
+          <li class="footer__item">
+            <strong class="contacts__bold">2023</strong>
+          </li>
+          <li class="footer__item"><a href="https://rs.school/js-stage0/" target="_blank" class="footer__link">
+              <img src="../assets/icons/footer/RS_School-svg.svg" alt="Logo RS School" width="80" height="60">
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./galery-cards/index.js"></script>
+</body>
+
+</html>
